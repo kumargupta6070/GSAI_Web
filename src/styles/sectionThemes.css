@@ -1,273 +1,401 @@
 /* ==========================================================================
-   GSA INDUSTRIES — SECTION-SPECIFIC DISTINCT SOFT-DARK COLOR THEMES
-   Har section ke liye distinctive, vibrant halka dark background color
-   with smooth gradients and ambient radial glows
+   GSA INDUSTRIES — SECTION COLOR THEMES (LIGHT & DARK COMPATIBLE)
+   Har section me different color ka background:
+   - Light Theme: Distinct soft pastel/shaded tints with crisp dark text & white glass cards
+   - Dark Theme: Distinct soft-dark ambient gradients with glowing borders & bright text
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. HOME: HERO SECTION (Aerospace Navy & Electric Cyan)
-   -------------------------------------------------------------------------- */
-.home-hero-section {
-  background: radial-gradient(circle at 82% 22%, rgba(2, 132, 199, 0.18) 0%, transparent 55%),
-              radial-gradient(circle at 10% 80%, rgba(234, 88, 12, 0.14) 0%, transparent 50%),
-              linear-gradient(145deg, #070c17 0%, #0d1629 60%, #0a1122 100%) !important;
-  border-bottom: 1px solid rgba(2, 132, 199, 0.2);
-  color: #f8fafc;
+/* ==========================================================================
+   1. LIGHT THEME SECTION PALETTES (:root / [data-theme="light"])
+   ========================================================================== */
+:root,
+[data-theme="light"] {
+  /* Outer feature page backgrounds */
+  .about-feature-page,
+  .products-feature-page,
+  .capabilities-feature-page,
+  .quality-feature-page,
+  .industries-feature-page,
+  .contact-page {
+    background-color: #f8fafc;
+  }
+
+  /* 1. HERO SECTION (Soft Sky & Azure tint) */
+  .home-hero-section {
+    background: radial-gradient(circle at 82% 22%, rgba(2, 132, 199, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 10% 80%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
+                linear-gradient(145deg, #f0f7ff 0%, #e0f2fe 55%, #f8fafc 100%) !important;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 2. STATS STRIP */
+  .home-stats-strip-section .stats-strip-card {
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid rgba(2, 132, 199, 0.22) !important;
+    box-shadow: 0 16px 36px -10px rgba(2, 132, 199, 0.12), 0 0 20px rgba(2, 132, 199, 0.05) !important;
+  }
+
+  /* 3. ABOUT PREVIEW / COMPANY OVERVIEW (Soft Warm Amber / Sand tint) */
+  .home-about-preview-section,
+  .company-overview-section {
+    background: radial-gradient(circle at 15% 35%, rgba(234, 88, 12, 0.08) 0%, transparent 55%),
+                linear-gradient(180deg, #f8fafc 0%, #fff7ed 55%, #fef3c7 100%) !important;
+    border-top: 1px solid rgba(234, 88, 12, 0.12);
+    border-bottom: 1px solid rgba(234, 88, 12, 0.12);
+    color: var(--text-primary);
+  }
+
+  /* 4. CAPABILITIES OVERVIEW / DIVISIONS (Cool Steel Blue tint) */
+  .home-cap-overview-section,
+  .capabilities-top-section {
+    background: radial-gradient(circle at 85% 30%, rgba(2, 132, 199, 0.08) 0%, transparent 55%),
+                linear-gradient(180deg, #fef3c7 0%, #f1f5f9 55%, #e2e8f0 100%) !important;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.12);
+    color: var(--text-primary);
+  }
+
+  /* 5. PRODUCTS SHOWCASE / CATALOG (Soft Teal & Cyan tint) */
+  .home-prod-showcase-section,
+  .products-header-section {
+    background: radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, #e2e8f0 0%, #ecfeff 55%, #cffafe 100%) !important;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 6. INDUSTRIES SERVED (Soft Royal Lavender / Violet tint) */
+  .home-industries-section,
+  .industries-main-section {
+    background: radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.09) 0%, transparent 55%),
+                linear-gradient(180deg, #cffafe 0%, #f5f3ff 55%, #ede9fe 100%) !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 7. CERTIFICATIONS BAR / LIST (Soft Fresh Emerald tint) */
+  .cert-bar-section,
+  .certifications-list-section {
+    background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.09) 0%, transparent 60%),
+                linear-gradient(180deg, #ede9fe 0%, #f0fdf4 55%, #dcfce7 100%) !important;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 8. CALL TO ACTION (Warm Molten Sunset Peach tint) */
+  .home-cta-full-section {
+    background: radial-gradient(circle at 50% 30%, rgba(234, 88, 12, 0.16) 0%, transparent 65%),
+                linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%) !important;
+    border-top: 1px solid rgba(234, 88, 12, 0.18);
+    color: var(--text-primary);
+  }
+
+  /* 9. VISION & MISSION */
+  .vision-mission-section {
+    background: radial-gradient(circle at 20% 40%, rgba(99, 102, 241, 0.09) 0%, transparent 55%),
+                linear-gradient(180deg, #f8fafc 0%, #f5f3ff 50%, #ede9fe 100%) !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 10. TIMELINE */
+  .timeline-component-section {
+    background: radial-gradient(circle at 75% 40%, rgba(234, 88, 12, 0.08) 0%, transparent 55%),
+                linear-gradient(180deg, #ede9fe 0%, #fff7ed 50%, #fef3c7 100%) !important;
+    border-bottom: 1px solid rgba(234, 88, 12, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 11. LEADERSHIP */
+  .leadership-component-section {
+    background: radial-gradient(circle at 25% 50%, rgba(6, 182, 212, 0.09) 0%, transparent 50%),
+                linear-gradient(180deg, #fef3c7 0%, #ecfeff 50%, #e0f2fe 100%) !important;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 12. PROCESS FLOW */
+  .process-flow-section {
+    background: radial-gradient(circle at 20% 40%, rgba(234, 88, 12, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, #f8fafc 0%, #fff7ed 50%, #fed7aa 100%) !important;
+    border-bottom: 1px solid rgba(234, 88, 12, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 13. EQUIPMENT LIST */
+  .equipment-list-section {
+    background: radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+                linear-gradient(180deg, #fed7aa 0%, #f1f5f9 50%, #e2e8f0 100%) !important;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 14. QUALITY INTRO & CERTS */
+  .quality-header-intro,
+  .cert-grid-component-section {
+    background: radial-gradient(circle at 25% 30%, rgba(59, 130, 246, 0.09) 0%, transparent 50%),
+                linear-gradient(180deg, #f8fafc 0%, #eff6ff 50%, #dbeafe 100%) !important;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 15. QUALITY LAB */
+  .lab-equipment-component-section {
+    background: radial-gradient(circle at 75% 40%, rgba(16, 185, 129, 0.09) 0%, transparent 50%),
+                linear-gradient(180deg, #dbeafe 0%, #f0fdf4 50%, #dcfce7 100%) !important;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 16. QUALITY PROCESS */
+  .quality-process-component-section {
+    background: radial-gradient(circle at 30% 60%, rgba(234, 88, 12, 0.09) 0%, transparent 50%),
+                linear-gradient(180deg, #dcfce7 0%, #fff7ed 50%, #fef3c7 100%) !important;
+    border-bottom: 1px solid rgba(234, 88, 12, 0.15);
+    color: var(--text-primary);
+  }
+
+  /* 17. CONTACT */
+  .contact-hero-section {
+    background: radial-gradient(circle at 50% 20%, rgba(2, 132, 199, 0.11) 0%, transparent 55%),
+                linear-gradient(180deg, #f0f7ff 0%, #e0f2fe 100%) !important;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.15);
+    color: var(--text-primary);
+  }
+
+  .contact-main-section {
+    background: radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
+                linear-gradient(180deg, #e0f2fe 0%, #f8fafc 50%, #f1f5f9 100%) !important;
+    color: var(--text-primary);
+  }
+
+  /* Glass cards on Light Theme */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid rgba(148, 163, 184, 0.3) !important;
+    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.03) !important;
+  }
+
+  .glass-card:hover {
+    background: #ffffff !important;
+    border-color: rgba(2, 132, 199, 0.5) !important;
+    box-shadow: 0 16px 36px -6px rgba(2, 132, 199, 0.15) !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #0f172a;
+  }
+
+  p, .overview-body-text, .vm-text, .leader-bio, .cert-desc-copy, .cap-card-main-desc,
+  .step-detail, .stage-node-desc, .ind-card-summary, .product-item-desc {
+    color: #334155;
+  }
+
+  .section-subtitle-text {
+    color: #64748b !important;
+  }
 }
 
-/* --------------------------------------------------------------------------
-   2. HOME: STATS STRIP SECTION (Deep Cobalt & Royal Indigo Slate)
-   -------------------------------------------------------------------------- */
-.home-stats-strip-section {
-  position: relative;
-  z-index: 5;
-}
+/* ==========================================================================
+   2. DARK THEME SECTION PALETTES ([data-theme="dark"])
+   ========================================================================== */
+[data-theme="dark"] {
+  /* Outer feature page backgrounds */
+  .about-feature-page,
+  .products-feature-page,
+  .capabilities-feature-page,
+  .quality-feature-page,
+  .industries-feature-page,
+  .contact-page {
+    background-color: #070b14;
+  }
 
-.home-stats-strip-section .stats-strip-card {
-  background: linear-gradient(135deg, rgba(13, 23, 48, 0.96) 0%, rgba(18, 30, 62, 0.96) 100%) !important;
-  border: 1px solid rgba(59, 130, 246, 0.32) !important;
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45),
-              0 0 35px rgba(59, 130, 246, 0.2) !important;
-}
+  /* 1. HERO SECTION (Aerospace Navy & Cyan Forge) */
+  .home-hero-section {
+    background: radial-gradient(circle at 82% 22%, rgba(2, 132, 199, 0.18) 0%, transparent 55%),
+                radial-gradient(circle at 10% 80%, rgba(234, 88, 12, 0.14) 0%, transparent 50%),
+                linear-gradient(145deg, #070c17 0%, #0d1629 60%, #0a1122 100%) !important;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   3. HOME: ABOUT PREVIEW / ABOUT: COMPANY OVERVIEW
-      (Warm Molten Bronze & Amber Charcoal)
-   -------------------------------------------------------------------------- */
-.home-about-preview-section,
-.company-overview-section {
-  background: radial-gradient(circle at 15% 35%, rgba(234, 88, 12, 0.14) 0%, transparent 55%),
-              radial-gradient(circle at 85% 85%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
-              linear-gradient(180deg, #0a101f 0%, #161114 50%, #140e0c 100%) !important;
-  border-top: 1px solid rgba(234, 88, 12, 0.2);
-  border-bottom: 1px solid rgba(234, 88, 12, 0.2);
-  color: #f8fafc;
-}
+  /* 2. STATS STRIP */
+  .home-stats-strip-section .stats-strip-card {
+    background: linear-gradient(135deg, rgba(13, 23, 48, 0.96) 0%, rgba(18, 30, 62, 0.96) 100%) !important;
+    border: 1px solid rgba(59, 130, 246, 0.32) !important;
+    box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45),
+                0 0 35px rgba(59, 130, 246, 0.2) !important;
+  }
 
-/* --------------------------------------------------------------------------
-   4. HOME: CAPABILITIES OVERVIEW / CAPABILITIES: TOP DIVISIONS
-      (Industrial Precision Machine Steel & Cobalt Slate)
-   -------------------------------------------------------------------------- */
-.home-cap-overview-section,
-.capabilities-top-section {
-  background: radial-gradient(circle at 85% 30%, rgba(2, 132, 199, 0.14) 0%, transparent 55%),
-              radial-gradient(circle at 15% 75%, rgba(148, 163, 184, 0.08) 0%, transparent 50%),
-              linear-gradient(180deg, #140e0c 0%, #0c1524 50%, #0a121f 100%) !important;
-  border-bottom: 1px solid rgba(2, 132, 199, 0.2);
-  color: #f8fafc;
-}
+  /* 3. ABOUT PREVIEW / COMPANY OVERVIEW (Warm Molten Bronze & Amber Charcoal) */
+  .home-about-preview-section,
+  .company-overview-section {
+    background: radial-gradient(circle at 15% 35%, rgba(234, 88, 12, 0.14) 0%, transparent 55%),
+                radial-gradient(circle at 85% 85%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+                linear-gradient(180deg, #0a101f 0%, #161114 50%, #140e0c 100%) !important;
+    border-top: 1px solid rgba(234, 88, 12, 0.2);
+    border-bottom: 1px solid rgba(234, 88, 12, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   5. HOME: PRODUCTS SHOWCASE / PRODUCTS: CATALOG
-      (Precision Teal & Cyan Steel)
-   -------------------------------------------------------------------------- */
-.home-prod-showcase-section,
-.products-header-section {
-  background: radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(2, 132, 199, 0.11) 0%, transparent 50%),
-              linear-gradient(180deg, #0a121f 0%, #091722 50%, #08141d 100%) !important;
-  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
-  color: #f8fafc;
-}
+  /* 4. CAPABILITIES OVERVIEW / DIVISIONS (Precision Machine Steel & Cobalt Slate) */
+  .home-cap-overview-section,
+  .capabilities-top-section {
+    background: radial-gradient(circle at 85% 30%, rgba(2, 132, 199, 0.14) 0%, transparent 55%),
+                radial-gradient(circle at 15% 75%, rgba(148, 163, 184, 0.08) 0%, transparent 50%),
+                linear-gradient(180deg, #140e0c 0%, #0c1524 50%, #0a121f 100%) !important;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   6. HOME: INDUSTRIES SERVED / INDUSTRIES: MARKET SECTORS
-      (Royal Violet & Deep Night Slate)
-   -------------------------------------------------------------------------- */
-.home-industries-section,
-.industries-main-section {
-  background: radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 55%),
-              radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
-              linear-gradient(180deg, #08141d 0%, #131028 50%, #100d23 100%) !important;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-  color: #f8fafc;
-}
+  /* 5. PRODUCTS SHOWCASE / CATALOG (Precision Teal & Cyan Steel) */
+  .home-prod-showcase-section,
+  .products-header-section {
+    background: radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(2, 132, 199, 0.11) 0%, transparent 50%),
+                linear-gradient(180deg, #0a121f 0%, #091722 50%, #08141d 100%) !important;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   7. HOME: CERTIFICATIONS BAR / ABOUT: ACCREDITATIONS LIST
-      (Pine & Accredited Industrial Emerald)
-   -------------------------------------------------------------------------- */
-.cert-bar-section,
-.certifications-list-section {
-  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.13) 0%, transparent 60%),
-              linear-gradient(180deg, #100d23 0%, #091715 50%, #081412 100%) !important;
-  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
-  color: #f8fafc;
-}
+  /* 6. INDUSTRIES SERVED (Royal Violet & Deep Night Slate) */
+  .home-industries-section,
+  .industries-main-section {
+    background: radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 55%),
+                radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+                linear-gradient(180deg, #08141d 0%, #131028 50%, #100d23 100%) !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   8. HOME: CALL TO ACTION FULL SECTION
-      (Deep Molten Forge Ember Glow)
-   -------------------------------------------------------------------------- */
-.home-cta-full-section {
-  background: radial-gradient(circle at 50% 30%, rgba(234, 88, 12, 0.24) 0%, transparent 65%),
-              linear-gradient(135deg, #180d08 0%, #291209 50%, #140907 100%) !important;
-  border-top: 1px solid rgba(234, 88, 12, 0.25);
-  color: #f8fafc;
-}
+  /* 7. CERTIFICATIONS BAR / LIST (Pine & Accredited Industrial Emerald) */
+  .cert-bar-section,
+  .certifications-list-section {
+    background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.13) 0%, transparent 60%),
+                linear-gradient(180deg, #100d23 0%, #091715 50%, #081412 100%) !important;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   9. ABOUT: VISION & MISSION
-      (Midnight Amethyst & Deep Indigo Slate)
-   -------------------------------------------------------------------------- */
-.vision-mission-section {
-  background: radial-gradient(circle at 20% 40%, rgba(99, 102, 241, 0.14) 0%, transparent 55%),
-              radial-gradient(circle at 80% 60%, rgba(234, 88, 12, 0.09) 0%, transparent 50%),
-              linear-gradient(180deg, #0c1527 0%, #13112b 50%, #100e24 100%) !important;
-  border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-  color: #f8fafc;
-}
+  /* 8. CALL TO ACTION (Deep Molten Forge Ember Glow) */
+  .home-cta-full-section {
+    background: radial-gradient(circle at 50% 30%, rgba(234, 88, 12, 0.24) 0%, transparent 65%),
+                linear-gradient(135deg, #180d08 0%, #291209 50%, #140907 100%) !important;
+    border-top: 1px solid rgba(234, 88, 12, 0.25);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   10. ABOUT: TIMELINE EVOLUTION
-       (Gunmetal Charcoal & Molten Copper Slate)
-   -------------------------------------------------------------------------- */
-.timeline-component-section {
-  background: radial-gradient(circle at 75% 40%, rgba(234, 88, 12, 0.13) 0%, transparent 55%),
-              linear-gradient(180deg, #100e24 0%, #141012 50%, #0f0d11 100%) !important;
-  border-bottom: 1px solid rgba(234, 88, 12, 0.2);
-  color: #f8fafc;
-}
+  /* 9. VISION & MISSION */
+  .vision-mission-section {
+    background: radial-gradient(circle at 20% 40%, rgba(99, 102, 241, 0.14) 0%, transparent 55%),
+                radial-gradient(circle at 80% 60%, rgba(234, 88, 12, 0.09) 0%, transparent 50%),
+                linear-gradient(180deg, #0c1527 0%, #13112b 50%, #100e24 100%) !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   11. ABOUT: TEAM LEADERSHIP
-       (Deep Platinum Charcoal & Cyan)
-   -------------------------------------------------------------------------- */
-.leadership-component-section {
-  background: radial-gradient(circle at 25% 50%, rgba(6, 182, 212, 0.13) 0%, transparent 50%),
-              linear-gradient(180deg, #0f0d11 0%, #0a1722 50%, #08131d 100%) !important;
-  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
-  color: #f8fafc;
-}
+  /* 10. TIMELINE */
+  .timeline-component-section {
+    background: radial-gradient(circle at 75% 40%, rgba(234, 88, 12, 0.13) 0%, transparent 55%),
+                linear-gradient(180deg, #100e24 0%, #141012 50%, #0f0d11 100%) !important;
+    border-bottom: 1px solid rgba(234, 88, 12, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   12. CAPABILITIES: PROCESS FLOW
-       (Hot Forge Copper & Amber Slate)
-   -------------------------------------------------------------------------- */
-.process-flow-section {
-  background: radial-gradient(circle at 20% 40%, rgba(234, 88, 12, 0.14) 0%, transparent 50%),
-              linear-gradient(180deg, #0b1526 0%, #16110d 50%, #130d09 100%) !important;
-  border-bottom: 1px solid rgba(234, 88, 12, 0.2);
-  color: #f8fafc;
-}
+  /* 11. LEADERSHIP */
+  .leadership-component-section {
+    background: radial-gradient(circle at 25% 50%, rgba(6, 182, 212, 0.13) 0%, transparent 50%),
+                linear-gradient(180deg, #0f0d11 0%, #0a1722 50%, #08131d 100%) !important;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   13. CAPABILITIES: MACHINERY & EQUIPMENT INVENTORY
-       (High-Precision Japanese CNC Teal Steel)
-   -------------------------------------------------------------------------- */
-.equipment-list-section {
-  background: radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.14) 0%, transparent 50%),
-              linear-gradient(180deg, #130d09 0%, #091722 50%, #07131c 100%) !important;
-  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
-  color: #f8fafc;
-}
+  /* 12. PROCESS FLOW */
+  .process-flow-section {
+    background: radial-gradient(circle at 20% 40%, rgba(234, 88, 12, 0.14) 0%, transparent 50%),
+                linear-gradient(180deg, #0b1526 0%, #16110d 50%, #130d09 100%) !important;
+    border-bottom: 1px solid rgba(234, 88, 12, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   14. QUALITY: ACCREDITATIONS & QUALITY INTRO
-       (Registrar Cobalt & Sapphire Blue)
-   -------------------------------------------------------------------------- */
-.quality-header-intro,
-.cert-grid-component-section {
-  background: radial-gradient(circle at 25% 30%, rgba(59, 130, 246, 0.14) 0%, transparent 50%),
-              linear-gradient(180deg, #070d18 0%, #0c162d 50%, #081122 100%) !important;
-  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-  color: #f8fafc;
-}
+  /* 13. EQUIPMENT LIST */
+  .equipment-list-section {
+    background: radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.14) 0%, transparent 50%),
+                linear-gradient(180deg, #130d09 0%, #091722 50%, #07131c 100%) !important;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   15. QUALITY: METROLOGY & LAB EQUIPMENT
-       (Zeiss Cleanroom Emerald & Teal)
-   -------------------------------------------------------------------------- */
-.lab-equipment-component-section {
-  background: radial-gradient(circle at 75% 40%, rgba(16, 185, 129, 0.14) 0%, transparent 50%),
-              linear-gradient(180deg, #081122 0%, #081716 50%, #061312 100%) !important;
-  border-bottom: 1px solid rgba(16, 185, 129, 0.2);
-  color: #f8fafc;
-}
+  /* 14. QUALITY INTRO & CERTS */
+  .quality-header-intro,
+  .cert-grid-component-section {
+    background: radial-gradient(circle at 25% 30%, rgba(59, 130, 246, 0.14) 0%, transparent 50%),
+                linear-gradient(180deg, #070d18 0%, #0c162d 50%, #081122 100%) !important;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   16. QUALITY: QUALITY PROCESS GATEWAY
-       (Zero-Defect Molten Gold & Amber)
-   -------------------------------------------------------------------------- */
-.quality-process-component-section {
-  background: radial-gradient(circle at 30% 60%, rgba(234, 88, 12, 0.13) 0%, transparent 50%),
-              linear-gradient(180deg, #061312 0%, #16110e 50%, #130d09 100%) !important;
-  border-bottom: 1px solid rgba(234, 88, 12, 0.2);
-  color: #f8fafc;
-}
+  /* 15. QUALITY LAB */
+  .lab-equipment-component-section {
+    background: radial-gradient(circle at 75% 40%, rgba(16, 185, 129, 0.14) 0%, transparent 50%),
+                linear-gradient(180deg, #081122 0%, #081716 50%, #061312 100%) !important;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   17. CONTACT: HERO & MAIN FORM DESK
-       (Executive Aerospace Graphite & Dual-Tone Indigo/Forge)
-   -------------------------------------------------------------------------- */
-.contact-hero-section {
-  background: radial-gradient(circle at 50% 20%, rgba(2, 132, 199, 0.16) 0%, transparent 55%),
-              linear-gradient(180deg, #060a14 0%, #0a1222 100%) !important;
-  border-bottom: 1px solid rgba(2, 132, 199, 0.18);
-  color: #f8fafc;
-}
+  /* 16. QUALITY PROCESS */
+  .quality-process-component-section {
+    background: radial-gradient(circle at 30% 60%, rgba(234, 88, 12, 0.13) 0%, transparent 50%),
+                linear-gradient(180deg, #061312 0%, #16110e 50%, #130d09 100%) !important;
+    border-bottom: 1px solid rgba(234, 88, 12, 0.2);
+    color: #f8fafc;
+  }
 
-.contact-main-section {
-  background: radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.11) 0%, transparent 50%),
-              radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.11) 0%, transparent 50%),
-              linear-gradient(180deg, #0a1222 0%, #0e1526 50%, #070b14 100%) !important;
-  color: #f8fafc;
-}
+  /* 17. CONTACT */
+  .contact-hero-section {
+    background: radial-gradient(circle at 50% 20%, rgba(2, 132, 199, 0.16) 0%, transparent 55%),
+                linear-gradient(180deg, #060a14 0%, #0a1222 100%) !important;
+    border-bottom: 1px solid rgba(2, 132, 199, 0.18);
+    color: #f8fafc;
+  }
 
-/* --------------------------------------------------------------------------
-   GLOBAL GLASS-CARD & TEXT REFINEMENT ON SOFT-DARK SECTIONS
-   Ensures cards, typography, and interactive elements are crisp and readable
-   -------------------------------------------------------------------------- */
-.glass-card {
-  background: rgba(13, 21, 38, 0.74) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.11) !important;
-  box-shadow: 0 12px 32px -6px rgba(0, 0, 0, 0.45) !important;
-}
+  .contact-main-section {
+    background: radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.11) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.11) 0%, transparent 50%),
+                linear-gradient(180deg, #0a1222 0%, #0e1526 50%, #070b14 100%) !important;
+    color: #f8fafc;
+  }
 
-.glass-card:hover {
-  background: rgba(18, 28, 52, 0.88) !important;
-  border-color: rgba(56, 189, 248, 0.5) !important;
-  box-shadow: 0 18px 40px -8px rgba(0, 0, 0, 0.55),
-              0 0 25px rgba(56, 189, 248, 0.15) !important;
-}
+  /* Glass cards on Dark Theme */
+  .glass-card {
+    background: rgba(13, 21, 38, 0.76) !important;
+    border: 1px solid rgba(255, 255, 255, 0.11) !important;
+    box-shadow: 0 12px 32px -6px rgba(0, 0, 0, 0.45) !important;
+  }
 
-/* High-contrast typography on soft dark backgrounds */
-h1, h2, h3, h4, h5, h6 {
-  color: #f8fafc;
-}
+  .glass-card:hover {
+    background: rgba(18, 28, 52, 0.88) !important;
+    border-color: rgba(56, 189, 248, 0.5) !important;
+    box-shadow: 0 18px 40px -8px rgba(0, 0, 0, 0.55),
+                0 0 25px rgba(56, 189, 248, 0.15) !important;
+  }
 
-p, .overview-body-text, .vm-text, .leader-bio, .cert-desc-copy, .cap-card-main-desc,
-.step-detail, .stage-node-desc, .ind-card-summary, .product-item-desc {
-  color: #cbd5e1;
-}
+  h1, h2, h3, h4, h5, h6 {
+    color: #f8fafc;
+  }
 
-.section-subtitle-text {
-  color: #94a3b8 !important;
-}
+  p, .overview-body-text, .vm-text, .leader-bio, .cert-desc-copy, .cap-card-main-desc,
+  .step-detail, .stage-node-desc, .ind-card-summary, .product-item-desc {
+    color: #cbd5e1;
+  }
 
-.section-tag-pill {
-  background: rgba(2, 132, 199, 0.15) !important;
-  color: #38bdf8 !important;
-  border-color: rgba(56, 189, 248, 0.3) !important;
-}
+  .section-subtitle-text {
+    color: #94a3b8 !important;
+  }
 
-/* Outer Feature Page Backgrounds */
-.about-feature-page,
-.products-feature-page,
-.capabilities-feature-page,
-.quality-feature-page,
-.industries-feature-page,
-.contact-page {
-  background-color: #070b14;
-}
-
-.about-breadcrumb-container,
-.products-breadcrumb-wrap,
-.capabilities-breadcrumb-wrap,
-.quality-breadcrumb-wrap,
-.industries-breadcrumb-wrap {
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  .section-tag-pill {
+    background: rgba(2, 132, 199, 0.15) !important;
+    color: #38bdf8 !important;
+    border-color: rgba(56, 189, 248, 0.3) !important;
+  }
 }

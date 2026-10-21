@@ -2,16 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useSnackbar } from '../../../../context/SnackbarContext';
 import confetti from 'canvas-confetti';
-import { 
-  Send, 
-  UploadCloud, 
-  FileCheck, 
-  CheckCircle2, 
-  ShieldCheck, 
-  Building2, 
-  User, 
-  Mail, 
-  Phone 
+import {
+  Send,
+  UploadCloud,
+  FileCheck,
+  CheckCircle2,
+  ShieldCheck,
+  Building2,
+  User,
+  Mail,
+  Phone
 } from 'lucide-react';
 import Button from '../../../../common/Button/Button';
 import Input from '../../../../common/Input/Input';
@@ -80,7 +80,7 @@ export const ContactForm = () => {
     const file = e.target.files[0];
     if (file) {
       if (file.size > 25 * 1024 * 1024) {
-        showError('File size exceeds 25 MB limit.');
+        showError('File size exceeds 25 MB limit. Please upload a smaller archive or compressed PDF.');
         return;
       }
       setUploadedFile({
@@ -145,7 +145,7 @@ export const ContactForm = () => {
           spread: 80,
           origin: { y: 0.6 }
         });
-      } catch (err) {}
+      } catch (err) { }
 
       showSuccess(`RFQ submitted successfully. Reference ID: ${generatedId}.`, 5000);
     }, 1200);

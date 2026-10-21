@@ -12,7 +12,7 @@ export const CertificationGrid = () => {
   const { showAlert } = useSnackbar();
 
   const handleDownloadCert = (certName) => {
-    showAlert(`Downloading accredited certificate for ${certName} (PDF)...`, 'success');
+    showAlert(`Downloading certificate for ${certName}.`, 'success');
   };
 
   return (

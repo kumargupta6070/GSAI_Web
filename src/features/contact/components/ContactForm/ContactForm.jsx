@@ -61,12 +61,18 @@ export const ContactForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleBlur = (field, labelName) => {
+  const handleBlur = (field) => {
     setTouched(prev => ({ ...prev, [field]: true }));
     if (!formData[field] || !formData[field].trim()) {
-      showError(`⚠️ "${labelName} *" is a required field. Please fill it in.`);
+      if (field === 'fullName') {
+        showError('Please enter your full name.');
+      } else if (field === 'email') {
+        showError('Please enter your corporate email.');
+      } else if (field === 'company') {
+        showError('Please enter your company name.');
+      }
     } else if (field === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      showError('⚠️ Please enter a valid corporate email address (e.g. name@company.com).');
+      showError('Please enter a valid corporate email address.');
     }
   };
 
@@ -74,14 +80,14 @@ export const ContactForm = () => {
     const file = e.target.files[0];
     if (file) {
       if (file.size > 25 * 1024 * 1024) {
-        showError('File size exceeds 25 MB limit. Please upload a smaller archive or compressed PDF.');
+        showError('File size exceeds 25 MB limit.');
         return;
       }
       setUploadedFile({
         name: file.name,
         size: (file.size / (1024 * 1024)).toFixed(2) + ' MB'
       });
-      showSuccess(`Uploaded ${file.name} successfully. Drawing attached to RFQ.`);
+      showSuccess(`File attached: ${file.name}`);
     }
   };
 
@@ -97,32 +103,32 @@ export const ContactForm = () => {
 
     // Granular validation for star (*) required fields
     if (!formData.fullName || !formData.fullName.trim()) {
-      showError('⚠️ "Full Name *" is a required field. Please enter your name.');
+      showError('Please enter your full name.');
       fullNameRef.current?.focus?.();
       return;
     }
 
     if (!formData.email || !formData.email.trim()) {
-      showError('⚠️ "Corporate Email *" is a required field. Please enter your work email.');
+      showError('Please enter your corporate email.');
       emailRef.current?.focus?.();
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email.trim())) {
-      showError('⚠️ Please enter a valid Corporate Email address (e.g. name@company.com).');
+      showError('Please enter a valid corporate email address.');
       emailRef.current?.focus?.();
       return;
     }
 
     if (!formData.company || !formData.company.trim()) {
-      showError('⚠️ "Company / OEM Name *" is a required field. Please specify your organization.');
+      showError('Please enter your company name.');
       companyRef.current?.focus?.();
       return;
     }
 
     if (!formData.productCategory) {
-      showError('⚠️ "Product Category *" is a required field. Please select a product division.');
+      showError('Please select a product category.');
       return;
     }
 
@@ -141,7 +147,7 @@ export const ContactForm = () => {
         });
       } catch (err) {}
 
-      showSuccess(`RFQ Submitted successfully! Reference ID: ${generatedId}. Engineering review begins within 24 hours.`, 6000);
+      showSuccess(`RFQ submitted successfully. Reference ID: ${generatedId}.`, 5000);
     }, 1200);
   };
 
@@ -196,10 +202,10 @@ export const ContactForm = () => {
                 label="Full Name *"
                 name="fullName"
                 ref={fullNameRef}
-                placeholder="e.g. Rajesh Kumar / John Doe"
+                placeholder="Enter your full name"
                 value={formData.fullName}
                 onChange={handleChange}
-                onBlur={() => handleBlur('fullName', 'Full Name')}
+                onBlur={() => handleBlur('fullName')}
                 required
                 icon={<User size={16} />}
               />
@@ -210,10 +216,10 @@ export const ContactForm = () => {
                 name="email"
                 type="email"
                 ref={emailRef}
-                placeholder="e.g. r.kumar@oem-group.com"
+                placeholder="name@company.com"
                 value={formData.email}
                 onChange={handleChange}
-                onBlur={() => handleBlur('email', 'Corporate Email')}
+                onBlur={() => handleBlur('email')}
                 required
                 icon={<Mail size={16} />}
               />
@@ -222,22 +228,22 @@ export const ContactForm = () => {
 
           <div className="form-double-col">
             <Input
-              label="Phone / WhatsApp"
+              label="Phone or WhatsApp"
               name="phone"
-              placeholder="+91 / +1 ..."
+              placeholder="+91 or +1 number"
               value={formData.phone}
               onChange={handleChange}
               icon={<Phone size={16} />}
             />
             <div className={`form-field-wrapper ${touched.company && !formData.company.trim() ? 'field-has-error' : ''}`}>
               <Input
-                label="Company / OEM Name *"
+                label="Company or OEM Name *"
                 name="company"
                 ref={companyRef}
-                placeholder="e.g. Caterpillar / Tier-1 OEM"
+                placeholder="Enter company name"
                 value={formData.company}
                 onChange={handleChange}
-                onBlur={() => handleBlur('company', 'Company / OEM Name')}
+                onBlur={() => handleBlur('company')}
                 required
                 icon={<Building2 size={16} />}
               />

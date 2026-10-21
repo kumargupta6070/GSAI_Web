@@ -12,7 +12,7 @@ export const CertificationsList = () => {
   const { showAlert } = useSnackbar();
 
   const handleDownload = (certName) => {
-    showAlert(`Downloading accredited certificate for ${certName} (PDF)...`, 'success');
+    showAlert(`Downloading certificate for ${certName}.`, 'success');
   };
 
   return (

@@ -26,10 +26,10 @@ export const Footer = () => {
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (!email || !email.includes('@')) {
-      showAlert('Please enter a valid business email address.', 'warning');
+      showAlert('Please enter a valid email address.', 'warning');
       return;
     }
-    showAlert('Thank you! You have subscribed to GSA Technical Bulletins & Updates.', 'success');
+    showAlert('Subscription confirmed. Thank you.', 'success');
     setEmail('');
   };
 

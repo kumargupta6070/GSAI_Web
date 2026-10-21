@@ -12,7 +12,7 @@ export const ProductDetail = ({ product, isOpen, onClose }) => {
   if (!product) return null;
 
   const handleDownload = () => {
-    showAlert(`Technical data sheet for "${product.name}" is downloading (PDF)...`, 'success');
+    showAlert(`Downloading technical spec sheet for ${product.name}.`, 'success');
   };
 
   return (

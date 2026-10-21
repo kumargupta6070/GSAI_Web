@@ -1,0 +1,154 @@
+.top-banner-bar {
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-light);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding: 0.45rem 0;
+  position: relative;
+  z-index: 101;
+}
+
+.top-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-banner-left,
+.top-banner-right {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.badge-cert {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent-emerald);
+  font-weight: 600;
+}
+
+.top-banner-divider {
+  color: var(--border-color);
+}
+
+.top-banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.top-banner-link:hover {
+  color: var(--accent-cyan);
+}
+
+/* Main Glass Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--nav-border);
+  transition: all var(--transition-base);
+  padding: 1rem 0;
+}
+
+.header-scrolled {
+  padding: 0.65rem 0;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.action-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.action-icon-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--accent-cyan);
+  border-color: var(--accent-cyan);
+  transform: translateY(-1px);
+}
+
+.theme-toggle-btn .sun-icon { color: #fbbf24; }
+.theme-toggle-btn .moon-icon { color: #6366f1; }
+
+.mobile-menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.mobile-nav-drawer.open {
+  max-height: 520px;
+  opacity: 1;
+}
+
+.mobile-nav-content {
+  padding: 1.5rem 1.25rem 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-nav-footer {
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .header-nav-wrapper { display: none; }
+  .header-cta-desktop { display: none; }
+  .mobile-menu-toggle { display: flex; }
+}
+
+@media (max-width: 768px) {
+  .top-banner-bar { display: none; }
+}

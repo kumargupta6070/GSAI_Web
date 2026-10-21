@@ -1,0 +1,51 @@
+.section-header-component {
+  max-width: 780px;
+  margin-bottom: 3.5rem;
+}
+
+.section-header-component.align-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header-component.align-left {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.section-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.tag-icon {
+  display: flex;
+  align-items: center;
+}
+
+.section-heading-text {
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle-text {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}

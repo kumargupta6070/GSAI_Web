@@ -1,0 +1,246 @@
+.capabilities-hero-section {
+  padding: 5rem 0 3.5rem 0;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.capabilities-hero-content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.capabilities-hero-title {
+  font-size: clamp(2.3rem, 4.3vw, 3.8rem);
+  font-weight: 800;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.capabilities-hero-lead {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Facility Items */
+.facility-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.facility-grid-card {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.facility-grid-card.reverse-order {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.facility-grid-card.reverse-order .facility-media-box {
+  order: 2;
+}
+
+.facility-grid-card.reverse-order .facility-info-box {
+  order: 1;
+}
+
+.facility-media-box {
+  position: relative;
+  min-height: 380px;
+}
+
+.facility-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.facility-badge-tag {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--accent-cyan);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.facility-info-box {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.facility-sub-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-orange);
+}
+
+.facility-title {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+}
+
+.facility-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.facility-equipment-block h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.65rem;
+  color: var(--text-primary);
+}
+
+.facility-equipment-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.facility-equipment-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.facility-cta-row {
+  margin-top: 0.5rem;
+}
+
+/* Machinery Table */
+.table-responsive-wrapper {
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.machinery-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.925rem;
+}
+
+.machinery-table th {
+  padding: 1.15rem 1.25rem;
+  background: var(--bg-secondary);
+  border-bottom: 2px solid var(--border-color);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.machinery-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.machinery-table tr:last-child td {
+  border-bottom: none;
+}
+
+.machinery-table tr:hover td {
+  background: var(--bg-tertiary);
+}
+
+.table-cat-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cat-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  margin-right: 0.4rem;
+}
+
+.table-cap-cell {
+  color: var(--accent-orange);
+  font-weight: 600;
+}
+
+.country-chip {
+  font-size: 0.8rem;
+  background: var(--bg-tertiary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+/* Bottom CTA */
+.capabilities-cta-section {
+  padding: 2rem 0 5rem 0;
+}
+
+.cap-cta-box {
+  padding: 3.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  border-radius: var(--radius-xl);
+}
+
+.cap-cta-box h2 {
+  font-size: 2.2rem;
+}
+
+.cap-cta-box p {
+  font-size: 1.1rem;
+  max-width: 650px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .facility-grid-card,
+  .facility-grid-card.reverse-order {
+    grid-template-columns: 1fr;
+  }
+  .facility-grid-card.reverse-order .facility-media-box {
+    order: 1;
+  }
+  .facility-grid-card.reverse-order .facility-info-box {
+    order: 2;
+  }
+  .facility-media-box {
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .facility-info-box {
+    padding: 1.5rem;
+  }
+  .cap-cta-box {
+    padding: 2.25rem 1.5rem;
+  }
+}

@@ -1,0 +1,26 @@
+.glow-border-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 1.5px;
+  overflow: hidden;
+}
+
+.glow-border-gradient {
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(from 0deg, transparent 0 340deg, var(--accent-cyan) 360deg);
+  animation: spinSlow 6s linear infinite;
+  pointer-events: none;
+}
+
+.glow-orange .glow-border-gradient {
+  background: conic-gradient(from 0deg, transparent 0 340deg, var(--accent-orange) 360deg);
+}
+
+.glow-border-content {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: calc(var(--radius-lg) - 1.5px);
+  height: 100%;
+  z-index: 1;
+}

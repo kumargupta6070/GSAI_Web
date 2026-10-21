@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>GSA Industries India Pvt Ltd — World-Class Precision Engineering & Forging</title>
+    <meta name="description" content="GSA Industries India Pvt Ltd (GSAI) is an IATF 16949 & ISO 9001 certified global leader in high-precision machined forging, Alfin rings, automotive pistons, and industrial components." />
+    <meta name="keywords" content="GSA Industries, Alfin Rings, Precision Machining, Hot Forging, Automotive Components, CNC Machining, Heat Treatment, Punjab Industrial Engineering" />
+    
+    <!-- Inline FOUC Prevention for Theme -->
+    <script>
+      (function() {
+        try {
+          const stored = localStorage.getItem('gsa_theme');
+          const theme = stored ? stored : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          const metaScheme = document.querySelector('meta[name="color-scheme"]');
+          if (metaScheme) metaScheme.content = theme;
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

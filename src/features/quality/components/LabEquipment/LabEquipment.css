@@ -1,0 +1,86 @@
+.lab-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.lab-items-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.lab-equipment-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.eq-name {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.eq-spec {
+  font-size: 0.825rem;
+  color: var(--accent-orange);
+  margin-bottom: 0.2rem;
+}
+
+.eq-role {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.lab-img-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
+}
+
+.lab-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+
+.lab-acceptance-chip {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.lab-acceptance-chip strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+}
+
+.lab-acceptance-chip span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.mt-1 {
+  margin-top: 3px;
+}
+
+@media (max-width: 1024px) {
+  .lab-split-grid {
+    grid-template-columns: 1fr;
+  }
+}

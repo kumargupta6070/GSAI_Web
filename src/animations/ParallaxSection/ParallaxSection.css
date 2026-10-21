@@ -1,0 +1,9 @@
+.parallax-section-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-inner-content {
+  will-change: transform;
+  transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}

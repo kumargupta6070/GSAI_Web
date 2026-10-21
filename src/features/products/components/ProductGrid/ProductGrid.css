@@ -1,0 +1,20 @@
+.product-grid-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.25rem;
+}
+
+.product-empty-grid-card {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .product-grid-catalog {
+    grid-template-columns: 1fr;
+  }
+}

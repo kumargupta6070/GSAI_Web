@@ -1,0 +1,63 @@
+.home-cta-full-section {
+  padding: 4rem 0 6rem 0;
+  position: relative;
+}
+
+.home-cta-box {
+  padding: 4rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  border-radius: var(--radius-xl);
+}
+
+.cta-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  background: var(--badge-bg);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+}
+
+.home-cta-box h2 {
+  font-size: clamp(2rem, 3.8vw, 2.85rem);
+  max-width: 750px;
+}
+
+.home-cta-box p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  color: var(--text-secondary);
+}
+
+.home-cta-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .home-cta-box {
+    padding: 2.5rem 1.5rem;
+  }
+  .home-cta-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .home-cta-btn-group a,
+  .home-cta-btn-group button {
+    width: 100%;
+  }
+}

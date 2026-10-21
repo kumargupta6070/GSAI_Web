@@ -1,0 +1,48 @@
+.industry-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ind-detail-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.ind-detail-stats-box {
+  background: var(--bg-tertiary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent-cyan);
+  font-weight: 600;
+  color: var(--accent-cyan);
+}
+
+.ind-detail-components-list h4 {
+  font-size: 0.98rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.ind-detail-components-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ind-detail-components-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+}
+
+.ind-detail-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}

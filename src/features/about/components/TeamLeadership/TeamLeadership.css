@@ -1,0 +1,53 @@
+.leadership-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.leader-card {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.leader-avatar-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leader-name {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+.leader-role-chip {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-orange);
+  background: var(--accent-orange-subtle);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(234, 88, 12, 0.25);
+}
+
+.leader-bio {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .leadership-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

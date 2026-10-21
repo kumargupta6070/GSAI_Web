@@ -1,0 +1,50 @@
+.quality-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.quality-stage-node {
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  height: 100%;
+}
+
+.stage-num-badge {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  background: var(--accent-orange-subtle);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(234, 88, 12, 0.3);
+}
+
+.stage-node-title {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+}
+
+.stage-node-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .quality-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .quality-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

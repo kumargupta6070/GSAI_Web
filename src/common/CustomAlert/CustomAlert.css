@@ -1,0 +1,116 @@
+.custom-alert-portal {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 440px;
+  width: calc(100vw - 3rem);
+  pointer-events: none;
+}
+
+.custom-alert-item {
+  pointer-events: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.95rem 1.25rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 14px 35px -4px rgba(0, 0, 0, 0.25), 0 4px 8px -2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: alertSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@keyframes alertSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.custom-alert-body {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+}
+
+.alert-icon.success { color: #10b981; }
+.alert-icon.error { color: #ef4444; }
+.alert-icon.warning { color: #f59e0b; }
+.alert-icon.info { color: #0284c7; }
+
+.custom-alert-message {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.45;
+}
+
+.custom-alert-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  color: var(--text-muted);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  margin-left: 0.75rem;
+}
+
+.custom-alert-close-btn:hover {
+  color: var(--text-primary);
+  background: var(--border-color);
+}
+
+.custom-alert-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: currentColor;
+  width: 100%;
+  animation: alertProgress linear forwards;
+}
+
+.alert-success { border-left: 4px solid #10b981; }
+.alert-success .custom-alert-progress { background: #10b981; }
+
+.alert-error { border-left: 4px solid #ef4444; }
+.alert-error .custom-alert-progress { background: #ef4444; }
+
+.alert-warning { border-left: 4px solid #f59e0b; }
+.alert-warning .custom-alert-progress { background: #f59e0b; }
+
+.alert-info { border-left: 4px solid #0284c7; }
+.alert-info .custom-alert-progress { background: #0284c7; }
+
+@keyframes alertProgress {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+@media (max-width: 640px) {
+  .custom-alert-portal {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    left: 1.25rem;
+    width: auto;
+  }
+}

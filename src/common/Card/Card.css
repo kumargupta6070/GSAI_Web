@@ -1,0 +1,31 @@
+.gsa-card-root {
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-glass:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.card-solid {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.card-bordered {
+  background: transparent;
+  border: 1.5px solid var(--border-color);
+}

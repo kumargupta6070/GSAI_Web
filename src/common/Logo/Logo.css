@@ -1,0 +1,78 @@
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.logo-symbol {
+  width: 44px;
+  height: 44px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.brand-logo:hover .logo-symbol {
+  transform: rotate(3deg) scale(1.05);
+}
+
+.logo-letter {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.logo-spark {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  color: var(--accent-orange);
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.logo-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent-orange);
+  letter-spacing: 0.16em;
+}
+
+.brand-logo-sm .logo-symbol {
+  width: 36px;
+  height: 36px;
+}
+.brand-logo-sm .logo-title {
+  font-size: 1.05rem;
+}
+
+.brand-logo-lg .logo-symbol {
+  width: 52px;
+  height: 52px;
+}
+.brand-logo-lg .logo-title {
+  font-size: 1.45rem;
+}

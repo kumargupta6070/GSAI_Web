@@ -1,0 +1,5 @@
+.magnetic-button-wrapper {
+  display: inline-block;
+  cursor: pointer;
+  will-change: transform;
+}

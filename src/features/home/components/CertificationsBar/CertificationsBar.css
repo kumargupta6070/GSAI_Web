@@ -1,0 +1,68 @@
+.cert-bar-section {
+  padding: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.cert-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.25rem 2rem;
+  border-radius: var(--radius-xl);
+}
+
+.cert-bar-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  border-right: 1px solid var(--border-color);
+  padding-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.cert-bar-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.cert-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.cert-pill-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.cert-pill-item span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .cert-bar-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .cert-bar-badge {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-right: 0;
+    padding-bottom: 0.75rem;
+    width: 100%;
+  }
+}

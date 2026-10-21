@@ -1,0 +1,117 @@
+.product-detail-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.detail-top-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1.5rem;
+}
+
+.detail-media-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.detail-desc-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.detail-specs-matrix h4,
+.detail-features-block h4,
+.detail-materials-block h4 {
+  font-size: 0.98rem;
+  margin-bottom: 0.65rem;
+  color: var(--text-primary);
+}
+
+.detail-specs-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--bg-tertiary);
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-md);
+}
+
+.detail-spec-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.spec-name {
+  color: var(--text-muted);
+}
+
+.spec-val {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.detail-features-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-features-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.material-pill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mat-tag {
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.detail-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .detail-top-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-modal-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .detail-modal-actions button,
+  .detail-modal-actions a {
+    width: 100%;
+  }
+}

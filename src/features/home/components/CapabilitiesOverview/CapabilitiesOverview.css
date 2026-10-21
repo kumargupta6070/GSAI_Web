@@ -1,0 +1,106 @@
+.home-cap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.home-cap-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cap-card-media {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.cap-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.home-cap-card:hover .cap-card-img {
+  transform: scale(1.05);
+}
+
+.cap-capacity-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(8px);
+  color: var(--accent-cyan);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.cap-card-content {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+.cap-card-title {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+}
+
+.cap-card-desc {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.cap-card-eq-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cap-card-eq-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.cap-card-link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  transition: gap var(--transition-fast);
+}
+
+.cap-card-link:hover {
+  gap: 0.75rem;
+}
+
+.mt-5 {
+  margin-top: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .home-cap-grid {
+    grid-template-columns: 1fr;
+  }
+}

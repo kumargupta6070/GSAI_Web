@@ -1,5 +1,5 @@
 import React from 'react';
-import CounterUp from '../../animations/CounterUp';
+import CounterAnimation from '../../animations/CounterAnimation/CounterAnimation';
 import './StatCounter.css';
 
 export const StatCounter = ({
@@ -13,7 +13,7 @@ export const StatCounter = ({
   return (
     <div className={`stat-counter-unit ${className}`}>
       <div className="stat-counter-number-wrapper">
-        <CounterUp
+        <CounterAnimation
           target={value}
           suffix={suffix}
           prefix={prefix}

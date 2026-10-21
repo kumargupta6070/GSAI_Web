@@ -12,26 +12,30 @@ export const LabEquipment = () => {
       <div className="container">
         <div className="lab-split-grid">
           <div className="lab-text-col">
-            <SectionTitle
-              tag="Metrology Infrastructure"
-              icon={<Microscope size={14} />}
-              title="Climate-Controlled"
-              gradientWord="3D Metrology Center"
-              gradientType="primary"
-              align="left"
-              subtitle="Maintained at 20°C ± 1°C to eliminate environmental thermal expansion, ensuring zero dimensional variation."
-            />
+            <ScrollReveal animation="fade-up" delay={50}>
+              <SectionTitle
+                tag="Metrology Infrastructure"
+                icon={<Microscope size={14} />}
+                title="Climate-Controlled"
+                gradientWord="3D Metrology Center"
+                gradientType="primary"
+                align="left"
+                subtitle="Maintained at 20°C ± 1°C to eliminate environmental thermal expansion, ensuring zero dimensional variation."
+              />
+            </ScrollReveal>
 
             <div className="lab-items-stack">
               {LAB_EQUIPMENT_DATA.map((eq, idx) => (
-                <div key={idx} className="lab-equipment-item">
-                  <CheckCircle2 size={18} className="text-cyan mt-1" />
-                  <div>
-                    <h4 className="eq-name">{eq.name}</h4>
-                    <p className="eq-spec mono-font">{eq.spec}</p>
-                    <p className="eq-role">{eq.role}</p>
+                <ScrollReveal key={idx} animation="fade-up" delay={150 + idx * 80}>
+                  <div className="lab-equipment-item">
+                    <CheckCircle2 size={18} className="text-cyan mt-1" />
+                    <div>
+                      <h4 className="eq-name">{eq.name}</h4>
+                      <p className="eq-spec mono-font">{eq.spec}</p>
+                      <p className="eq-role">{eq.role}</p>
+                    </div>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>

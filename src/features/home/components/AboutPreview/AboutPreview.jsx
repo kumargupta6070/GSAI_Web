@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Factory, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Factory, CheckCircle2, ArrowRight, ShieldCheck, Cpu } from 'lucide-react';
 import Button from '../../../../common/Button/Button';
 import SectionTitle from '../../../../common/SectionTitle/SectionTitle';
 import ScrollReveal from '../../../../animations/ScrollReveal/ScrollReveal';
@@ -13,7 +13,7 @@ export const AboutPreview = () => {
       <div className="container">
         <div className="about-preview-grid">
           <div className="preview-media-col">
-            <ScrollReveal animation="scale-up">
+            <ScrollReveal animation="scale-up" duration={700}>
               <TiltCard maxTilt={6}>
                 <div className="preview-img-card glass-card">
                   <img 
@@ -28,13 +28,17 @@ export const AboutPreview = () => {
                       <span>Fully Integrated Punjab Campus</span>
                     </div>
                   </div>
+                  <div className="preview-floating-tech-badge glass-card">
+                    <Cpu size={18} className="text-orange" />
+                    <span>4-Axis VMC &amp; German CMM</span>
+                  </div>
                 </div>
               </TiltCard>
             </ScrollReveal>
           </div>
 
           <div className="preview-text-col">
-            <ScrollReveal animation="fade-up">
+            <ScrollReveal animation="fade-up" delay={50}>
               <SectionTitle
                 tag="About GSA Industries"
                 icon={<Factory size={14} />}
@@ -43,29 +47,42 @@ export const AboutPreview = () => {
                 gradientType="primary"
                 align="left"
               />
+            </ScrollReveal>
 
+            <ScrollReveal animation="fade-up" delay={150}>
               <p className="preview-lead-p">
                 Established in 1988, GSA Industries India Pvt Ltd has established itself as an authoritative Tier-1 supplier of critical powertrain and chassis components for automotive and heavy agricultural leaders worldwide.
               </p>
+            </ScrollReveal>
+
+            <ScrollReveal animation="fade-up" delay={250}>
               <p className="preview-sub-p">
                 We control the entire manufacturing lifecycle under one roof: from in-house CAD/CAM tooling and DEFORM 3D forging simulation, through closed-die press lines and continuous SCADA-monitored heat treatment, to multi-axis CNC finishing and Zeiss CMM validation.
               </p>
+            </ScrollReveal>
 
-              <div className="preview-bullets-list">
+            <div className="preview-bullets-list">
+              <ScrollReveal animation="fade-up" delay={300}>
                 <div className="preview-bullet-item">
-                  <CheckCircle2 size={18} className="text-cyan" />
+                  <CheckCircle2 size={18} className="text-cyan bullet-icon" />
                   <span>Sub-micron machining tolerances with in-process Renishaw probes</span>
                 </div>
+              </ScrollReveal>
+              <ScrollReveal animation="fade-up" delay={380}>
                 <div className="preview-bullet-item">
-                  <CheckCircle2 size={18} className="text-cyan" />
+                  <CheckCircle2 size={18} className="text-orange bullet-icon" />
                   <span>Proprietary high-nickel centrifugal casting for Alfin insert rings</span>
                 </div>
+              </ScrollReveal>
+              <ScrollReveal animation="fade-up" delay={460}>
                 <div className="preview-bullet-item">
-                  <CheckCircle2 size={18} className="text-cyan" />
+                  <CheckCircle2 size={18} className="text-emerald bullet-icon" />
                   <span>Full PPAP Level 3, ISIR, Gage R&amp;R, and IMDS documentation</span>
                 </div>
-              </div>
+              </ScrollReveal>
+            </div>
 
+            <ScrollReveal animation="fade-up" delay={520}>
               <div className="preview-cta-row">
                 <Link to="/about">
                   <Button variant="forge" size="md" icon={<ArrowRight size={16} />} iconPosition="right">

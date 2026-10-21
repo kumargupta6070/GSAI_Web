@@ -14,6 +14,19 @@
   border-bottom: 1px solid var(--border-color);
 }
 
+.form-header-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 87, 34, 0.12);
+  color: var(--color-orange-500, #ff5722);
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
 .contact-form-header h3 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -24,6 +37,19 @@
 .contact-form-header p {
   color: var(--text-secondary);
   font-size: 0.95rem;
+}
+
+.field-has-error .input-base-element {
+  border-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.04) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+  animation: shakeField 0.35s ease;
+}
+
+@keyframes shakeField {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
 }
 
 .contact-form-grid-body {

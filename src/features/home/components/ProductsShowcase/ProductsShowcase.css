@@ -1,3 +1,50 @@
+.home-prod-filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-xs);
+}
+
+.filter-pill-btn:hover {
+  color: var(--text-primary);
+  border-color: rgba(2, 132, 199, 0.4);
+  transform: translateY(-2px);
+}
+
+.filter-pill-btn.active {
+  background: var(--color-orange-500, #ff5722);
+  color: #ffffff;
+  border-color: var(--color-orange-500, #ff5722);
+  box-shadow: 0 4px 14px rgba(255, 87, 34, 0.3);
+}
+
+.active-glow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 8px #ffffff;
+  animation: pulseGlow 1.5s infinite;
+}
+
 .home-prod-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

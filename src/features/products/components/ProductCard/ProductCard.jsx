@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Eye, ArrowRight } from 'lucide-react';
 import Button from '../../../../common/Button/Button';
+import TiltCard from '../../../../animations/TiltCard/TiltCard';
 import './ProductCard.css';
 
 export const ProductCard = ({ product, onOpenDetail }) => {
   return (
-    <div className="product-module-card glass-card">
+    <TiltCard maxTilt={5}>
+      <div className="product-module-card glass-card">
       <div className="product-media-top">
         <img src={product.image} alt={product.name} className="product-thumb-img" />
         <span className="product-category-pill">{product.category}</span>
@@ -50,6 +52,7 @@ export const ProductCard = ({ product, onOpenDetail }) => {
         </div>
       </div>
     </div>
+  </TiltCard>
   );
 };
 

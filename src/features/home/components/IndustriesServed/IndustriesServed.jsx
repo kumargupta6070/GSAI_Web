@@ -4,6 +4,7 @@ import { Compass, Truck, Tractor, HardHat, Train, Fuel, ArrowRight, CheckCircle2
 import Button from '../../../../common/Button/Button';
 import SectionTitle from '../../../../common/SectionTitle/SectionTitle';
 import ScrollReveal from '../../../../animations/ScrollReveal/ScrollReveal';
+import TiltCard from '../../../../animations/TiltCard/TiltCard';
 import { INDUSTRIES_DATA } from '../../../../data/gsaData';
 import './IndustriesServed.css';
 
@@ -31,30 +32,32 @@ export const IndustriesServed = () => {
         <div className="home-industries-grid">
           {INDUSTRIES_DATA.map((ind, idx) => (
             <ScrollReveal key={ind.id} animation="fade-up" delay={idx * 80}>
-              <div className="home-ind-card glass-card">
-                <div className="ind-header-bar">
-                  <div className="ind-icon-circle">
-                    {ICONS[ind.id] || <Compass size={24} className="text-cyan" />}
+              <TiltCard maxTilt={6}>
+                <div className="home-ind-card glass-card">
+                  <div className="ind-header-bar">
+                    <div className="ind-icon-circle">
+                      {ICONS[ind.id] || <Compass size={24} className="text-cyan" />}
+                    </div>
+                    <span className="ind-badge-small">{ind.badge}</span>
                   </div>
-                  <span className="ind-badge-small">{ind.badge}</span>
+
+                  <h3 className="ind-card-title">{ind.title}</h3>
+                  <p className="ind-card-desc">{ind.description}</p>
+
+                  <div className="ind-chips-row">
+                    {ind.highlights.slice(0, 3).map((h, i) => (
+                      <span key={i} className="ind-chip">
+                        <CheckCircle2 size={12} className="text-cyan" /> {h}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link to={`/industries#${ind.id}`} className="ind-explore-link">
+                    <span>Explore Applications</span>
+                    <ArrowRight size={15} />
+                  </Link>
                 </div>
-
-                <h3 className="ind-card-title">{ind.title}</h3>
-                <p className="ind-card-desc">{ind.description}</p>
-
-                <div className="ind-chips-row">
-                  {ind.highlights.slice(0, 3).map((h, i) => (
-                    <span key={i} className="ind-chip">
-                      <CheckCircle2 size={12} className="text-cyan" /> {h}
-                    </span>
-                  ))}
-                </div>
-
-                <Link to={`/industries#${ind.id}`} className="ind-explore-link">
-                  <span>Explore Applications</span>
-                  <ArrowRight size={15} />
-                </Link>
-              </div>
+              </TiltCard>
             </ScrollReveal>
           ))}
         </div>

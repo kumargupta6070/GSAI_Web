@@ -17,7 +17,10 @@ export const HeroSection = () => {
         <div className="home-hero-content">
           <ScrollReveal animation="fade-up" delay={100}>
             <div className="home-hero-badge">
-              <span className="live-dot" />
+              <span className="live-dot-wrapper">
+                <span className="live-dot" />
+                <span className="live-dot-ring" />
+              </span>
               <span className="badge-txt">IATF 16949:2016 Certified World-Class Precision</span>
               <span className="badge-sub">Global OEM Tier Supplier</span>
             </div>

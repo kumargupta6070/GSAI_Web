@@ -10,6 +10,8 @@ import {
   ShieldCheck, 
   ExternalLink 
 } from 'lucide-react';
+import ScrollReveal from '../../../../animations/ScrollReveal/ScrollReveal';
+import TiltCard from '../../../../animations/TiltCard/TiltCard';
 import { CONTACT_METADATA } from '../../data/contactData';
 import './ContactInfo.css';
 
@@ -17,16 +19,18 @@ export const ContactInfo = () => {
   return (
     <div className="contact-info-container">
       {/* Primary Plant Location */}
-      <div className="info-block plant-location-card glass-card">
-        <div className="info-block-header">
-          <div className="icon-badge">
-            <MapPin size={22} className="text-orange" />
-          </div>
-          <div>
-            <h4>Manufacturing Plant &amp; HQ</h4>
-            <span className="badge-pill">Main Facility</span>
-          </div>
-        </div>
+      <ScrollReveal animation="fade-up" delay={100}>
+        <TiltCard maxTilt={5}>
+          <div className="info-block plant-location-card glass-card">
+            <div className="info-block-header">
+              <div className="icon-badge">
+                <MapPin size={22} className="text-orange" />
+              </div>
+              <div>
+                <h4>Manufacturing Plant &amp; HQ</h4>
+                <span className="badge-pill">Main Facility</span>
+              </div>
+            </div>
         <p className="address-text">
           <strong>GSA Industries (India) Pvt. Ltd.</strong><br />
           Village Samgoli, Tehsil Derabassi,<br />
@@ -42,8 +46,12 @@ export const ContactInfo = () => {
           <ExternalLink size={14} />
         </a>
       </div>
+    </TiltCard>
+  </ScrollReveal>
 
-      {/* Direct Departments */}
+  {/* Direct Departments */}
+  <ScrollReveal animation="fade-up" delay={180}>
+    <TiltCard maxTilt={5}>
       <div className="info-block glass-card">
         <div className="info-block-header">
           <div className="icon-badge">
@@ -71,8 +79,12 @@ export const ContactInfo = () => {
           ))}
         </div>
       </div>
+    </TiltCard>
+  </ScrollReveal>
 
-      {/* Logistics & Proximity */}
+  {/* Logistics & Proximity */}
+  <ScrollReveal animation="fade-up" delay={260}>
+    <TiltCard maxTilt={5}>
       <div className="info-block glass-card">
         <div className="info-block-header">
           <div className="icon-badge">
@@ -108,8 +120,12 @@ export const ContactInfo = () => {
           </div>
         </div>
       </div>
+    </TiltCard>
+  </ScrollReveal>
 
-      {/* Operations Hours */}
+  {/* Operations Hours */}
+  <ScrollReveal animation="fade-up" delay={340}>
+    <TiltCard maxTilt={5}>
       <div className="info-block hours-card glass-card">
         <div className="info-block-header">
           <div className="icon-badge">
@@ -125,7 +141,9 @@ export const ContactInfo = () => {
           <strong>Manufacturing Plants:</strong> 3-Shift Continuous Forge &amp; Foundry Operations
         </p>
       </div>
-    </div>
+    </TiltCard>
+  </ScrollReveal>
+</div>
   );
 };
 

@@ -3,11 +3,23 @@ import { useSnackbar } from '../../context/SnackbarContext';
 import { CheckCircle2, AlertTriangle, AlertCircle, Info, X } from 'lucide-react';
 import './CustomAlert.css';
 
-const ICONS = {
-  success: <CheckCircle2 size={20} className="alert-icon success" />,
-  error: <AlertCircle size={20} className="alert-icon error" />,
-  warning: <AlertTriangle size={20} className="alert-icon warning" />,
-  info: <Info size={20} className="alert-icon info" />
+const ALERT_CONFIG = {
+  success: {
+    icon: <CheckCircle2 size={20} color="#ffffff" strokeWidth={2.4} />,
+    iconClass: 'icon-circle-success'
+  },
+  error: {
+    icon: <AlertTriangle size={20} color="#ffffff" strokeWidth={2.4} />,
+    iconClass: 'icon-circle-error'
+  },
+  warning: {
+    icon: <AlertTriangle size={20} color="#ffffff" strokeWidth={2.4} />,
+    iconClass: 'icon-circle-warning'
+  },
+  info: {
+    icon: <Info size={20} color="#ffffff" strokeWidth={2.4} />,
+    iconClass: 'icon-circle-info'
+  }
 };
 
 export const CustomAlert = () => {
@@ -16,32 +28,39 @@ export const CustomAlert = () => {
   if (!alerts || !alerts.length) return null;
 
   return (
-    <div className="custom-alert-portal" role="region" aria-label="Notifications">
-      {alerts.map(alert => (
-        <div 
-          key={alert.id} 
-          className={`custom-alert-item alert-${alert.type}`}
-          role="alert"
-        >
-          <div className="custom-alert-body">
-            {ICONS[alert.type] || ICONS.info}
-            <div className="custom-alert-message">{alert.message}</div>
-          </div>
-          <button 
-            className="custom-alert-close-btn"
-            onClick={() => hideAlert(alert.id)}
-            aria-label="Close notification"
+    <div className="custom-snackbar-viewport" role="region" aria-label="Notifications">
+      {alerts.map(alert => {
+        const config = ALERT_CONFIG[alert.type] || ALERT_CONFIG.info;
+        const alertType = alert.type === 'warning' ? 'error' : alert.type; // user Flutter code maps warning to error style
+
+        return (
+          <div 
+            key={alert.id} 
+            className={`custom-snackbar-container snackbar-${alertType}`}
+            role="alert"
           >
-            <X size={16} />
-          </button>
-          {alert.duration > 0 && (
-            <div 
-              className="custom-alert-progress" 
-              style={{ animationDuration: `${alert.duration}ms` }}
-            />
-          )}
-        </div>
-      ))}
+            {/* Circular Icon Container */}
+            <div className={`custom-snackbar-icon-box ${config.iconClass}`}>
+              {config.icon}
+            </div>
+
+            {/* Message Body */}
+            <div className="custom-snackbar-text">
+              {alert.message}
+            </div>
+
+            {/* Dismiss Button */}
+            <button 
+              className="custom-snackbar-close-btn"
+              onClick={() => hideAlert(alert.id)}
+              aria-label="Dismiss notification"
+              title="Dismiss"
+            >
+              <X size={16} strokeWidth={2.5} />
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 };

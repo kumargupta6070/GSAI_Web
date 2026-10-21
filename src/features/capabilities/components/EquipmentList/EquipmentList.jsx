@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionTitle from '../../../../common/SectionTitle/SectionTitle';
+import ScrollReveal from '../../../../animations/ScrollReveal/ScrollReveal';
 import { EQUIPMENT_INVENTORY } from '../../data/capabilitiesData';
 import { Cpu } from 'lucide-react';
 import './EquipmentList.css';
@@ -8,16 +9,19 @@ export const EquipmentList = () => {
   return (
     <section className="section-spacing equipment-list-section">
       <div className="container">
-        <SectionTitle
-          tag="Machinery Inventory"
-          icon={<Cpu size={14} />}
-          title="Fleet Specifications &amp;"
-          gradientWord="Technical Capacities"
-          gradientType="primary"
-          subtitle="World-class machinery sourced from Germany, Japan, USA, and Switzerland for maximum operational uptime."
-        />
+        <ScrollReveal animation="fade-up" delay={50}>
+          <SectionTitle
+            tag="Machinery Inventory"
+            icon={<Cpu size={14} />}
+            title="Fleet Specifications &amp;"
+            gradientWord="Technical Capacities"
+            gradientType="primary"
+            subtitle="World-class machinery sourced from Germany, Japan, USA, and Switzerland for maximum operational uptime."
+          />
+        </ScrollReveal>
 
-        <div className="equipment-table-card glass-card">
+        <ScrollReveal animation="fade-up" delay={150}>
+          <div className="equipment-table-card glass-card">
           <table className="equipment-data-table">
             <thead>
               <tr>
@@ -43,9 +47,10 @@ export const EquipmentList = () => {
             </tbody>
           </table>
         </div>
-      </div>
-    </section>
-  );
+      </ScrollReveal>
+    </div>
+  </section>
+);
 };
 
 export default EquipmentList;

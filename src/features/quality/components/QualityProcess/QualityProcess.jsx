@@ -2,6 +2,7 @@ import React from 'react';
 import { FileCheck2 } from 'lucide-react';
 import SectionTitle from '../../../../common/SectionTitle/SectionTitle';
 import ScrollReveal from '../../../../animations/ScrollReveal/ScrollReveal';
+import TiltCard from '../../../../animations/TiltCard/TiltCard';
 import { QUALITY_PROCESS_STAGES } from '../../data/qualityData';
 import './QualityProcess.css';
 
@@ -21,11 +22,13 @@ export const QualityProcess = () => {
         <div className="quality-steps-grid">
           {QUALITY_PROCESS_STAGES.map((stg, idx) => (
             <ScrollReveal key={stg.step} animation="fade-up" delay={idx * 80}>
-              <div className="quality-stage-node glass-card">
-                <div className="stage-num-badge mono-font">{stg.step}</div>
-                <h3 className="stage-node-title">{stg.title}</h3>
-                <p className="stage-node-desc">{stg.desc}</p>
-              </div>
+              <TiltCard maxTilt={8}>
+                <div className="quality-stage-node glass-card">
+                  <div className="stage-num-badge mono-font">{stg.step}</div>
+                  <h3 className="stage-node-title">{stg.title}</h3>
+                  <p className="stage-node-desc">{stg.desc}</p>
+                </div>
+              </TiltCard>
             </ScrollReveal>
           ))}
         </div>

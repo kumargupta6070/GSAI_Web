@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionTitle from '../../../../common/SectionTitle/SectionTitle';
 import ScrollReveal from '../../../../animations/ScrollReveal/ScrollReveal';
+import TiltCard from '../../../../animations/TiltCard/TiltCard';
 import { PROCESS_FLOW_STEPS } from '../../data/capabilitiesData';
 import { Layers } from 'lucide-react';
 import './ProcessFlow.css';
@@ -21,11 +22,13 @@ export const ProcessFlow = () => {
         <div className="process-flow-grid">
           {PROCESS_FLOW_STEPS.map((step, idx) => (
             <ScrollReveal key={step.step} animation="fade-up" delay={idx * 80}>
-              <div className="process-step-card glass-card">
-                <div className="step-num-pill mono-font">{step.step}</div>
-                <h3 className="step-name">{step.title}</h3>
-                <p className="step-detail">{step.desc}</p>
-              </div>
+              <TiltCard maxTilt={8}>
+                <div className="process-step-card glass-card">
+                  <div className="step-num-pill mono-font">{step.step}</div>
+                  <h3 className="step-name">{step.title}</h3>
+                  <p className="step-detail">{step.desc}</p>
+                </div>
+              </TiltCard>
             </ScrollReveal>
           ))}
         </div>

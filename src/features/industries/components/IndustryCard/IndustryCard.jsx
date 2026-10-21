@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Truck, Tractor, HardHat, Train, Fuel, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Button from '../../../../common/Button/Button';
+import TiltCard from '../../../../animations/TiltCard/TiltCard';
 import './IndustryCard.css';
 
 const ICONS = {
@@ -14,7 +15,8 @@ const ICONS = {
 
 export const IndustryCard = ({ industry, onOpenDetail }) => {
   return (
-    <div id={industry.id} className="ind-module-card glass-card">
+    <TiltCard maxTilt={6}>
+      <div id={industry.id} className="ind-module-card glass-card">
       <div className="ind-card-top-header">
         <div className="ind-card-icon-frame">
           {ICONS[industry.id] || <Truck size={28} className="text-cyan" />}
@@ -52,6 +54,7 @@ export const IndustryCard = ({ industry, onOpenDetail }) => {
         </Link>
       </div>
     </div>
+  </TiltCard>
   );
 };
 

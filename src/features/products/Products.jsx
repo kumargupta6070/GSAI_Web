@@ -5,6 +5,7 @@ import ProductFilter from './components/ProductFilter/ProductFilter';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Breadcrumb from '../../common/Breadcrumb/Breadcrumb';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
+import ScrollReveal from '../../animations/ScrollReveal/ScrollReveal';
 import { ALL_PRODUCTS } from './data/productsData';
 import { setPageTitle } from '../../utils/seoMeta';
 import { Layers } from 'lucide-react';
@@ -42,21 +43,25 @@ export const Products = () => {
 
       <section className="section-spacing products-header-section">
         <div className="container">
-          <SectionTitle
-            tag="Engineered Products"
-            icon={<Layers size={14} />}
-            title="Complete Portfolio of Precision"
-            gradientWord="Forgings &amp; Alfin Rings"
-            gradientType="primary"
-            subtitle="Engineered for high-cycle fatigue, elevated combustion temperatures, and rigorous Tier-1 OEM tolerances."
-          />
+          <ScrollReveal animation="fade-up" delay={50}>
+            <SectionTitle
+              tag="Engineered Products"
+              icon={<Layers size={14} />}
+              title="Complete Portfolio of Precision"
+              gradientWord="Forgings &amp; Alfin Rings"
+              gradientType="primary"
+              subtitle="Engineered for high-cycle fatigue, elevated combustion temperatures, and rigorous Tier-1 OEM tolerances."
+            />
+          </ScrollReveal>
 
-          <ProductFilter
-            activeCategory={activeCategory}
-            onSelectCategory={setActiveCategory}
-            searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
-          />
+          <ScrollReveal animation="fade-up" delay={120}>
+            <ProductFilter
+              activeCategory={activeCategory}
+              onSelectCategory={setActiveCategory}
+              searchQuery={searchQuery}
+              onSearchChange={setSearchQuery}
+            />
+          </ScrollReveal>
 
           <ProductGrid
             products={filteredProducts}

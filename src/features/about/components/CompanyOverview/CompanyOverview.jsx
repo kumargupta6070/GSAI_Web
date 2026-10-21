@@ -28,7 +28,7 @@ export const CompanyOverview = () => {
           </div>
 
           <div className="overview-content">
-            <ScrollReveal animation="fade-up">
+            <ScrollReveal animation="fade-up" delay={50}>
               <SectionTitle
                 tag="Company Overview"
                 icon={<Factory size={14} />}
@@ -37,29 +37,40 @@ export const CompanyOverview = () => {
                 gradientType="primary"
                 align="left"
               />
+            </ScrollReveal>
 
+            <ScrollReveal animation="fade-up" delay={150}>
               <p className="overview-lead-text">
                 GSA Industries India Pvt Ltd operates from state-of-the-art manufacturing facilities in Punjab, India. Founded in 1988, our evolution from a specialized regional machine shop to an international Tier-1 supplier demonstrates our enduring commitment to precision engineering.
               </p>
+            </ScrollReveal>
+
+            <ScrollReveal animation="fade-up" delay={250}>
               <p className="overview-body-text">
                 Today, GSA operates comprehensive facilities including in-house CAD/CAM tool rooms, high-tonnage closed-die forging presses (1000T &amp; 2500T), automated continuous atmosphere heat treatment lines, multi-axis Japanese CNC turning and milling centers, and a climate-controlled Zeiss 3D CMM metrology laboratory.
               </p>
+            </ScrollReveal>
 
-              <div className="overview-key-points">
+            <div className="overview-key-points">
+              <ScrollReveal animation="fade-up" delay={320}>
                 <div className="point-item">
                   <CheckCircle2 size={18} className="text-cyan" />
                   <span>Integrated manufacturing eliminates third-party risks</span>
                 </div>
+              </ScrollReveal>
+              <ScrollReveal animation="fade-up" delay={400}>
                 <div className="point-item">
                   <CheckCircle2 size={18} className="text-cyan" />
                   <span>Certified to IATF 16949:2016, ISO 9001:2015 &amp; ISO 14001</span>
                 </div>
+              </ScrollReveal>
+              <ScrollReveal animation="fade-up" delay={480}>
                 <div className="point-item">
                   <CheckCircle2 size={18} className="text-cyan" />
                   <span>2,500 MT/month forging throughput with induction billet heating</span>
                 </div>
-              </div>
-            </ScrollReveal>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </div>

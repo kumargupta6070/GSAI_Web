@@ -9,6 +9,10 @@
   transform: translateY(32px);
 }
 
+.scroll-reveal-container.fade-down {
+  transform: translateY(-32px);
+}
+
 .scroll-reveal-container.fade-in {
   transform: none;
 }

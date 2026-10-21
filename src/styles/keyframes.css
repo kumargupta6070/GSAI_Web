@@ -1,5 +1,6 @@
 /* ==========================================================================
    GSA INDUSTRIES — GLOBAL KEYFRAME ANIMATIONS
+   Next-Level Industrial Interactive Motion Tokens
    ========================================================================== */
 
 @keyframes float {
@@ -9,7 +10,7 @@
 
 @keyframes pulseGlow {
   0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(1.05); }
+  50% { opacity: 0.95; transform: scale(1.08); }
 }
 
 @keyframes shimmer {
@@ -44,11 +45,39 @@
 
 @keyframes flameFlicker {
   0%, 100% { filter: drop-shadow(0 0 8px rgba(234, 88, 12, 0.6)); }
-  50% { filter: drop-shadow(0 0 16px rgba(251, 146, 60, 0.9)); }
+  50% { filter: drop-shadow(0 0 18px rgba(251, 146, 60, 0.95)); }
 }
 
 @keyframes borderGlowLoop {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+@keyframes rippleRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes orbFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
 }

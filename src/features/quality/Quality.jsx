@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import CertificationGrid from './components/CertificationGrid/CertificationGrid';
 import LabEquipment from './components/LabEquipment/LabEquipment';
 import QualityProcess from './components/QualityProcess/QualityProcess';
-import Breadcrumb from '../../common/Breadcrumb/Breadcrumb';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import { setPageTitle } from '../../utils/seoMeta';
 import { ShieldCheck } from 'lucide-react';
@@ -15,10 +14,6 @@ export const Quality = () => {
 
   return (
     <div className="quality-feature-page">
-      <div className="container quality-breadcrumb-wrap">
-        <Breadcrumb items={[{ label: 'Quality Assurance' }]} />
-      </div>
-
       <section className="section-spacing quality-header-intro">
         <div className="container">
           <SectionTitle

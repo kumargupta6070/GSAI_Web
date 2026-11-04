@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import IndustryCard from './components/IndustryCard/IndustryCard';
 import IndustryDetail from './components/IndustryDetail/IndustryDetail';
-import Breadcrumb from '../../common/Breadcrumb/Breadcrumb';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import ScrollReveal from '../../animations/ScrollReveal/ScrollReveal';
 import { ALL_INDUSTRIES } from './data/industriesData';
@@ -18,10 +17,6 @@ export const Industries = () => {
 
   return (
     <div className="industries-feature-page">
-      <div className="container industries-breadcrumb-wrap">
-        <Breadcrumb items={[{ label: 'Industries' }]} />
-      </div>
-
       <section className="section-spacing industries-main-section">
         <div className="container">
           <SectionTitle

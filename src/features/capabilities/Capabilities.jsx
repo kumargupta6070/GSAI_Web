@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import CapabilityCard from './components/CapabilityCard/CapabilityCard';
 import ProcessFlow from './components/ProcessFlow/ProcessFlow';
 import EquipmentList from './components/EquipmentList/EquipmentList';
-import Breadcrumb from '../../common/Breadcrumb/Breadcrumb';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import { ALL_CAPABILITIES } from './data/capabilitiesData';
 import { setPageTitle } from '../../utils/seoMeta';
@@ -16,10 +15,6 @@ export const Capabilities = () => {
 
   return (
     <div className="capabilities-feature-page">
-      <div className="container capabilities-breadcrumb-wrap">
-        <Breadcrumb items={[{ label: 'Capabilities' }]} />
-      </div>
-
       <section className="section-spacing capabilities-top-section">
         <div className="container">
           <SectionTitle

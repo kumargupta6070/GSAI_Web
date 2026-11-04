@@ -4,7 +4,6 @@ import VisionMission from './components/VisionMission/VisionMission';
 import Timeline from './components/Timeline/Timeline';
 import TeamLeadership from './components/TeamLeadership/TeamLeadership';
 import CertificationsList from './components/CertificationsList/CertificationsList';
-import Breadcrumb from '../../common/Breadcrumb/Breadcrumb';
 import { setPageTitle } from '../../utils/seoMeta';
 import './About.css';
 
@@ -15,10 +14,6 @@ export const About = () => {
 
   return (
     <div className="about-feature-page">
-      <div className="container about-breadcrumb-container">
-        <Breadcrumb items={[{ label: 'About Us' }]} />
-      </div>
-
       <CompanyOverview />
       <VisionMission />
       <Timeline />

@@ -16,11 +16,13 @@ export const AboutPreview = () => {
             <ScrollReveal animation="scale-up" duration={700}>
               <TiltCard maxTilt={6}>
                 <div className="preview-img-card glass-card">
-                  <img 
-                    src="/images/capabilities/cnc-machining.jpg" 
-                    alt="GSA CNC Machining Plant" 
-                    className="preview-img"
-                  />
+                  <div className="preview-img-inner">
+                    <img 
+                      src="/images/capabilities/cnc-machining.jpg" 
+                      alt="GSA CNC Machining Plant" 
+                      className="preview-img"
+                    />
+                  </div>
                   <div className="preview-stat-overlay glass-card">
                     <Factory size={22} className="text-cyan" />
                     <div>

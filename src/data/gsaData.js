@@ -280,6 +280,14 @@ export const INDUSTRIES_DATA = [
     badge: 'Severe Service',
     stats: 'Rated to 10,000 PSI',
     highlights: ['API Valve Bodies', 'High-Pressure Flanges', 'Manifold Blocks', 'Turbine Fittings']
+  },
+  {
+    id: 'aerospace-defense',
+    title: 'Aerospace & Defense Systems',
+    description: 'Ultra-precision high-strength forged structural brackets, engine mountings, and specialized nickel-alloy turbine components meeting aerospace tolerances.',
+    badge: 'Aerospace Standard',
+    stats: 'Sub-Micron Tolerances',
+    highlights: ['Turbine Blades & Hubs', 'Structural Airframe Mounts', 'Landing Gear Forgings', 'Defense Actuator Brackets']
   }
 ];
 

@@ -30,10 +30,20 @@
   }
 
   /* 2. STATS STRIP */
+  .home-stats-strip-section {
+    background: radial-gradient(circle at 15% 50%, rgba(2, 132, 199, 0.12) 0%, transparent 55%),
+                radial-gradient(circle at 85% 50%, rgba(234, 88, 12, 0.1) 0%, transparent 55%),
+                linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #eff6ff 100%) !important;
+    border-top: 1px solid rgba(2, 132, 199, 0.18);
+    border-bottom: 1px solid rgba(2, 132, 199, 0.18);
+    padding: 3.5rem 0 !important;
+    margin: 0 !important;
+  }
+
   .home-stats-strip-section .stats-strip-card {
-    background: rgba(255, 255, 255, 0.94) !important;
-    border: 1px solid rgba(2, 132, 199, 0.22) !important;
-    box-shadow: 0 16px 36px -10px rgba(2, 132, 199, 0.12), 0 0 20px rgba(2, 132, 199, 0.05) !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 1.5px solid rgba(2, 132, 199, 0.28) !important;
+    box-shadow: 0 20px 45px -10px rgba(2, 132, 199, 0.16), 0 0 20px rgba(2, 132, 199, 0.05) !important;
   }
 
   /* 3. ABOUT PREVIEW / COMPANY OVERVIEW (Soft Warm Amber / Sand tint) */
@@ -67,19 +77,42 @@
   /* 6. INDUSTRIES SERVED (Soft Royal Lavender / Violet tint) */
   .home-industries-section,
   .industries-main-section {
-    background: radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.09) 0%, transparent 55%),
-                linear-gradient(180deg, #cffafe 0%, #f5f3ff 55%, #ede9fe 100%) !important;
-    border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+    background: radial-gradient(circle at 15% 25%, rgba(99, 102, 241, 0.14) 0%, transparent 55%),
+                radial-gradient(circle at 85% 75%, rgba(2, 132, 199, 0.12) 0%, transparent 50%),
+                linear-gradient(135deg, #eef2ff 0%, #ede9fe 50%, #e0f2fe 100%) !important;
+    border-top: 1.5px solid rgba(99, 102, 241, 0.2);
+    border-bottom: 1.5px solid rgba(99, 102, 241, 0.2);
+    padding: 5.5rem 0 !important;
     color: var(--text-primary);
   }
 
-  /* 7. CERTIFICATIONS BAR / LIST (Soft Fresh Emerald tint) */
+  .home-industries-section .home-ind-card {
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 1.5px solid rgba(99, 102, 241, 0.25) !important;
+    box-shadow: 0 14px 30px -6px rgba(99, 102, 241, 0.12) !important;
+  }
+
+  .home-industries-section .home-ind-card:hover {
+    border-color: rgba(99, 102, 241, 0.6) !important;
+    box-shadow: 0 20px 40px -8px rgba(99, 102, 241, 0.22) !important;
+  }
+
+  /* 7. CERTIFICATIONS BAR / LIST (Soft Fresh Emerald & Mint tint) */
   .cert-bar-section,
   .certifications-list-section {
-    background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.09) 0%, transparent 60%),
-                linear-gradient(180deg, #ede9fe 0%, #f0fdf4 55%, #dcfce7 100%) !important;
-    border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+    background: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.16) 0%, transparent 55%),
+                radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.14) 0%, transparent 55%),
+                linear-gradient(135deg, #dcfce7 0%, #ecfdf5 50%, #cffafe 100%) !important;
+    border-top: 1.5px solid rgba(16, 185, 129, 0.28);
+    border-bottom: 1.5px solid rgba(16, 185, 129, 0.28);
+    padding: 3rem 0 !important;
     color: var(--text-primary);
+  }
+
+  .cert-bar-section .cert-bar-wrapper {
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 1.5px solid rgba(16, 185, 129, 0.35) !important;
+    box-shadow: 0 16px 36px -10px rgba(16, 185, 129, 0.2) !important;
   }
 
   /* 8. CALL TO ACTION (Warm Molten Sunset Peach tint) */
@@ -220,9 +253,19 @@
   }
 
   /* 2. STATS STRIP */
+  .home-stats-strip-section {
+    background: radial-gradient(circle at 15% 50%, rgba(2, 132, 199, 0.18) 0%, transparent 55%),
+                radial-gradient(circle at 85% 50%, rgba(234, 88, 12, 0.14) 0%, transparent 55%),
+                linear-gradient(135deg, #0a1324 0%, #0d1b32 50%, #081120 100%) !important;
+    border-top: 1px solid rgba(2, 132, 199, 0.22);
+    border-bottom: 1px solid rgba(2, 132, 199, 0.22);
+    padding: 3.5rem 0 !important;
+    margin: 0 !important;
+  }
+
   .home-stats-strip-section .stats-strip-card {
     background: linear-gradient(135deg, rgba(13, 23, 48, 0.96) 0%, rgba(18, 30, 62, 0.96) 100%) !important;
-    border: 1px solid rgba(59, 130, 246, 0.32) !important;
+    border: 1.5px solid rgba(59, 130, 246, 0.35) !important;
     box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45),
                 0 0 35px rgba(59, 130, 246, 0.2) !important;
   }
@@ -261,20 +304,42 @@
   /* 6. INDUSTRIES SERVED (Royal Violet & Deep Night Slate) */
   .home-industries-section,
   .industries-main-section {
-    background: radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 55%),
-                radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
+    background: radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.18) 0%, transparent 55%),
+                radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
                 linear-gradient(180deg, #08141d 0%, #131028 50%, #100d23 100%) !important;
-    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    border-top: 1.5px solid rgba(99, 102, 241, 0.25);
+    border-bottom: 1.5px solid rgba(99, 102, 241, 0.25);
+    padding: 5.5rem 0 !important;
     color: #f8fafc;
+  }
+
+  .home-industries-section .home-ind-card {
+    background: rgba(19, 16, 40, 0.88) !important;
+    border: 1.5px solid rgba(99, 102, 241, 0.3) !important;
+    box-shadow: 0 14px 30px -6px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  .home-industries-section .home-ind-card:hover {
+    border-color: rgba(168, 85, 247, 0.65) !important;
+    box-shadow: 0 20px 45px -8px rgba(0, 0, 0, 0.6), 0 0 25px rgba(168, 85, 247, 0.2) !important;
   }
 
   /* 7. CERTIFICATIONS BAR / LIST (Pine & Accredited Industrial Emerald) */
   .cert-bar-section,
   .certifications-list-section {
-    background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.13) 0%, transparent 60%),
-                linear-gradient(180deg, #100d23 0%, #091715 50%, #081412 100%) !important;
-    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+    background: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.2) 0%, transparent 55%),
+                radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 55%),
+                linear-gradient(135deg, #091715 0%, #0d221e 50%, #081412 100%) !important;
+    border-top: 1.5px solid rgba(16, 185, 129, 0.25);
+    border-bottom: 1.5px solid rgba(16, 185, 129, 0.25);
+    padding: 3rem 0 !important;
     color: #f8fafc;
+  }
+
+  .cert-bar-section .cert-bar-wrapper {
+    background: linear-gradient(135deg, rgba(13, 31, 26, 0.96) 0%, rgba(10, 24, 20, 0.96) 100%) !important;
+    border: 1.5px solid rgba(16, 185, 129, 0.35) !important;
+    box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.45), 0 0 25px rgba(16, 185, 129, 0.15) !important;
   }
 
   /* 8. CALL TO ACTION (Deep Molten Forge Ember Glow) */

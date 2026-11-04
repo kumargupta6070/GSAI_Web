@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Compass, Truck, Tractor, HardHat, Train, Fuel, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Compass, Truck, Tractor, HardHat, Train, Fuel, Plane, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Button from '../../../../common/Button/Button';
 import SectionTitle from '../../../../common/SectionTitle/SectionTitle';
 import ScrollReveal from '../../../../animations/ScrollReveal/ScrollReveal';
@@ -13,7 +13,8 @@ const ICONS = {
   agriculture: <Tractor size={26} className="text-orange" />,
   'heavy-engineering': <HardHat size={26} className="text-amber" />,
   'railways-marine': <Train size={26} className="text-cyan" />,
-  'energy-oil-gas': <Fuel size={26} className="text-emerald" />
+  'energy-oil-gas': <Fuel size={26} className="text-emerald" />,
+  'aerospace-defense': <Plane size={26} className="text-orange" />
 };
 
 export const IndustriesServed = () => {

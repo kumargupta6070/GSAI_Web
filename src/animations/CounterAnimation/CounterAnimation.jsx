@@ -9,9 +9,10 @@ export const CounterAnimation = ({
   duration = 2000,
   className = ''
 }) => {
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.2 });
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
+  const isDecimal = Number(target) % 1 !== 0;
 
   useEffect(() => {
     if (isVisible && !hasStarted) {
@@ -24,25 +25,30 @@ export const CounterAnimation = ({
         if (!startTime) startTime = timestamp;
         const progress = Math.min((timestamp - startTime) / duration, 1);
         const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-        const currentVal = Math.floor(easeProgress * target);
+        const rawVal = easeProgress * Number(target);
+        const currentVal = isDecimal ? parseFloat(rawVal.toFixed(2)) : Math.floor(rawVal);
 
         setCount(currentVal);
 
         if (progress < 1) {
           frameId = requestAnimationFrame(step);
         } else {
-          setCount(target);
+          setCount(Number(target));
         }
       };
 
       frameId = requestAnimationFrame(step);
       return () => cancelAnimationFrame(frameId);
     }
-  }, [isVisible, hasStarted, target, duration]);
+  }, [isVisible, hasStarted, target, duration, isDecimal]);
+
+  const displayValue = isDecimal 
+    ? count.toFixed(2) 
+    : count.toLocaleString();
 
   return (
     <span ref={ref} className={`counter-animation-number ${className}`}>
-      {prefix}{count.toLocaleString()}{suffix}
+      {prefix}{displayValue}{suffix}
     </span>
   );
 };

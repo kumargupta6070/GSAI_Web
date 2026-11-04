@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Truck, Tractor, HardHat, Train, Fuel, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Truck, Tractor, HardHat, Train, Fuel, Plane, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Button from '../../../../common/Button/Button';
 import TiltCard from '../../../../animations/TiltCard/TiltCard';
 import './IndustryCard.css';
@@ -10,7 +10,8 @@ const ICONS = {
   agriculture: <Tractor size={30} className="text-orange" />,
   'heavy-engineering': <HardHat size={30} className="text-amber" />,
   'railways-marine': <Train size={30} className="text-cyan" />,
-  'energy-oil-gas': <Fuel size={30} className="text-emerald" />
+  'energy-oil-gas': <Fuel size={30} className="text-emerald" />,
+  'aerospace-defense': <Plane size={30} className="text-orange" />
 };
 
 export const IndustryCard = ({ industry, onOpenDetail }) => {

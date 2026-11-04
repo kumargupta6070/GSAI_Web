@@ -65,8 +65,8 @@
   /* Navigation & Chrome */
   --nav-bg: rgba(255, 255, 255, 0.9);
   --nav-border: rgba(226, 232, 240, 0.9);
-  --footer-bg: #0b1120;
-  --footer-text: #e2e8f0;
+  --footer-bg: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 60%, #e2e8f0 100%);
+  --footer-text: #334155;
 
   --badge-bg: rgba(2, 132, 199, 0.1);
   --badge-text: #0284c7;

@@ -1,6 +1,8 @@
 .home-stats-strip-section {
   position: relative;
   z-index: 5;
+  margin-top: -2.5rem;
+  margin-bottom: 2.5rem;
   padding: 3.5rem 0;
 }
 
@@ -15,14 +17,14 @@
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.12),
-              0 0 30px rgba(2, 132, 199, 0.05);
+    0 0 30px rgba(2, 132, 199, 0.05);
   transition: all 0.3s ease;
 }
 
 .stats-strip-card:hover {
   border-color: rgba(2, 132, 199, 0.4);
   box-shadow: 0 25px 55px -10px rgba(0, 0, 0, 0.18),
-              0 0 35px rgba(234, 88, 12, 0.1);
+    0 0 35px rgba(234, 88, 12, 0.1);
 }
 
 .stat-strip-col {
@@ -61,11 +63,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+
   .stat-strip-col {
     border-right: none;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 1.5rem;
   }
+
   .stat-strip-col:nth-last-child(-n+2) {
     border-bottom: none;
     padding-bottom: 0;

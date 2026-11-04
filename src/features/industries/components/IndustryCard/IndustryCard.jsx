@@ -18,44 +18,44 @@ export const IndustryCard = ({ industry, onOpenDetail }) => {
   return (
     <TiltCard maxTilt={6}>
       <div id={industry.id} className="ind-module-card glass-card">
-      <div className="ind-card-top-header">
-        <div className="ind-card-icon-frame">
-          {ICONS[industry.id] || <Truck size={28} className="text-cyan" />}
+        <div className="ind-card-top-header">
+          <div className="ind-card-icon-frame">
+            {ICONS[industry.id] || <Truck size={28} className="text-cyan" />}
+          </div>
+          <span className="ind-card-tag">{industry.badge}</span>
+          <span className="ind-card-stat-pill mono-font">{industry.stats}</span>
         </div>
-        <span className="ind-card-tag">{industry.badge}</span>
-        <span className="ind-card-stat-pill mono-font">{industry.stats}</span>
-      </div>
 
-      <h3 className="ind-card-heading">{industry.title}</h3>
-      <p className="ind-card-summary">{industry.description}</p>
+        <h3 className="ind-card-heading">{industry.title}</h3>
+        <p className="ind-card-summary">{industry.description}</p>
 
-      <div className="ind-card-components-matrix">
-        <h4>Typical Critical Components Supplied:</h4>
-        <div className="ind-pills-wrap">
-          {industry.highlights.map((h, i) => (
-            <span key={i} className="ind-comp-pill">
-              <CheckCircle2 size={13} className="text-cyan" /> {h}
-            </span>
-          ))}
+        <div className="ind-card-components-matrix">
+          <h4>Typical Critical Components Supplied:</h4>
+          <div className="ind-pills-wrap">
+            {industry.highlights.map((h, i) => (
+              <span key={i} className="ind-comp-pill">
+                <CheckCircle2 size={13} className="text-cyan" /> {h}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
 
-      <div className="ind-card-bottom-actions">
-        <Button
-          variant="secondary"
-          size="sm"
-          onClick={() => onOpenDetail(industry)}
-        >
-          View Technical Scope
-        </Button>
-        <Link to={`/contact?industry=${encodeURIComponent(industry.title)}`}>
-          <Button variant="forge" size="sm" icon={<ArrowRight size={15} />} iconPosition="right">
-            Sector RFQ
+        <div className="ind-card-bottom-actions">
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={() => onOpenDetail(industry)}
+          >
+            View Technical Scope
           </Button>
-        </Link>
+          <Link to={`/contact?industry=${encodeURIComponent(industry.title)}`}>
+            <Button variant="forge" size="sm" icon={<ArrowRight size={15} />} iconPosition="right">
+              Sector RFQ
+            </Button>
+          </Link>
+        </div>
       </div>
-    </div>
-  </TiltCard>
+    </TiltCard>
   );
 };
 

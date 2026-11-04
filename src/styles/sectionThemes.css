@@ -10,6 +10,7 @@
    ========================================================================== */
 :root,
 [data-theme="light"] {
+
   /* Outer feature page backgrounds */
   .about-feature-page,
   .products-feature-page,
@@ -23,8 +24,8 @@
   /* 1. HERO SECTION (Soft Sky & Azure tint) */
   .home-hero-section {
     background: radial-gradient(circle at 82% 22%, rgba(2, 132, 199, 0.12) 0%, transparent 60%),
-                radial-gradient(circle at 10% 80%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
-                linear-gradient(145deg, #f0f7ff 0%, #e0f2fe 55%, #f8fafc 100%) !important;
+      radial-gradient(circle at 10% 80%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
+      linear-gradient(145deg, #f0f7ff 0%, #e0f2fe 55%, #f8fafc 100%) !important;
     border-bottom: 1px solid rgba(2, 132, 199, 0.15);
     color: var(--text-primary);
   }
@@ -32,8 +33,8 @@
   /* 2. STATS STRIP */
   .home-stats-strip-section {
     background: radial-gradient(circle at 15% 50%, rgba(2, 132, 199, 0.12) 0%, transparent 55%),
-                radial-gradient(circle at 85% 50%, rgba(234, 88, 12, 0.1) 0%, transparent 55%),
-                linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #eff6ff 100%) !important;
+      radial-gradient(circle at 85% 50%, rgba(234, 88, 12, 0.1) 0%, transparent 55%),
+      linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #eff6ff 100%) !important;
     border-top: 1px solid rgba(2, 132, 199, 0.18);
     border-bottom: 1px solid rgba(2, 132, 199, 0.18);
     padding: 3.5rem 0 !important;
@@ -50,7 +51,7 @@
   .home-about-preview-section,
   .company-overview-section {
     background: radial-gradient(circle at 15% 35%, rgba(234, 88, 12, 0.08) 0%, transparent 55%),
-                linear-gradient(180deg, #f8fafc 0%, #fff7ed 55%, #fef3c7 100%) !important;
+      linear-gradient(180deg, #f8fafc 0%, #fff7ed 55%, #fef3c7 100%) !important;
     border-top: 1px solid rgba(234, 88, 12, 0.12);
     border-bottom: 1px solid rgba(234, 88, 12, 0.12);
     color: var(--text-primary);
@@ -60,7 +61,7 @@
   .home-cap-overview-section,
   .capabilities-top-section {
     background: radial-gradient(circle at 85% 30%, rgba(2, 132, 199, 0.08) 0%, transparent 55%),
-                linear-gradient(180deg, #fef3c7 0%, #f1f5f9 55%, #e2e8f0 100%) !important;
+      linear-gradient(180deg, #fef3c7 0%, #f1f5f9 55%, #e2e8f0 100%) !important;
     border-bottom: 1px solid rgba(2, 132, 199, 0.12);
     color: var(--text-primary);
   }
@@ -69,7 +70,7 @@
   .home-prod-showcase-section,
   .products-header-section {
     background: radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
-                linear-gradient(180deg, #e2e8f0 0%, #ecfeff 55%, #cffafe 100%) !important;
+      linear-gradient(180deg, #e2e8f0 0%, #ecfeff 55%, #cffafe 100%) !important;
     border-bottom: 1px solid rgba(6, 182, 212, 0.15);
     color: var(--text-primary);
   }
@@ -78,8 +79,8 @@
   .home-industries-section,
   .industries-main-section {
     background: radial-gradient(circle at 15% 25%, rgba(99, 102, 241, 0.14) 0%, transparent 55%),
-                radial-gradient(circle at 85% 75%, rgba(2, 132, 199, 0.12) 0%, transparent 50%),
-                linear-gradient(135deg, #eef2ff 0%, #ede9fe 50%, #e0f2fe 100%) !important;
+      radial-gradient(circle at 85% 75%, rgba(2, 132, 199, 0.12) 0%, transparent 50%),
+      linear-gradient(135deg, #eef2ff 0%, #ede9fe 50%, #e0f2fe 100%) !important;
     border-top: 1.5px solid rgba(99, 102, 241, 0.2);
     border-bottom: 1.5px solid rgba(99, 102, 241, 0.2);
     padding: 5.5rem 0 !important;
@@ -101,8 +102,8 @@
   .cert-bar-section,
   .certifications-list-section {
     background: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.16) 0%, transparent 55%),
-                radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.14) 0%, transparent 55%),
-                linear-gradient(135deg, #dcfce7 0%, #ecfdf5 50%, #cffafe 100%) !important;
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.14) 0%, transparent 55%),
+      linear-gradient(135deg, #dcfce7 0%, #ecfdf5 50%, #cffafe 100%) !important;
     border-top: 1.5px solid rgba(16, 185, 129, 0.28);
     border-bottom: 1.5px solid rgba(16, 185, 129, 0.28);
     padding: 3rem 0 !important;
@@ -118,7 +119,7 @@
   /* 8. CALL TO ACTION (Warm Molten Sunset Peach tint) */
   .home-cta-full-section {
     background: radial-gradient(circle at 50% 30%, rgba(234, 88, 12, 0.16) 0%, transparent 65%),
-                linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%) !important;
+      linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%) !important;
     border-top: 1px solid rgba(234, 88, 12, 0.18);
     color: var(--text-primary);
   }
@@ -126,7 +127,7 @@
   /* 9. VISION & MISSION */
   .vision-mission-section {
     background: radial-gradient(circle at 20% 40%, rgba(99, 102, 241, 0.09) 0%, transparent 55%),
-                linear-gradient(180deg, #f8fafc 0%, #f5f3ff 50%, #ede9fe 100%) !important;
+      linear-gradient(180deg, #f8fafc 0%, #f5f3ff 50%, #ede9fe 100%) !important;
     border-bottom: 1px solid rgba(99, 102, 241, 0.15);
     color: var(--text-primary);
   }
@@ -134,7 +135,7 @@
   /* 10. TIMELINE */
   .timeline-component-section {
     background: radial-gradient(circle at 75% 40%, rgba(234, 88, 12, 0.08) 0%, transparent 55%),
-                linear-gradient(180deg, #ede9fe 0%, #fff7ed 50%, #fef3c7 100%) !important;
+      linear-gradient(180deg, #ede9fe 0%, #fff7ed 50%, #fef3c7 100%) !important;
     border-bottom: 1px solid rgba(234, 88, 12, 0.15);
     color: var(--text-primary);
   }
@@ -142,7 +143,7 @@
   /* 11. LEADERSHIP */
   .leadership-component-section {
     background: radial-gradient(circle at 25% 50%, rgba(6, 182, 212, 0.09) 0%, transparent 50%),
-                linear-gradient(180deg, #fef3c7 0%, #ecfeff 50%, #e0f2fe 100%) !important;
+      linear-gradient(180deg, #fef3c7 0%, #ecfeff 50%, #e0f2fe 100%) !important;
     border-bottom: 1px solid rgba(6, 182, 212, 0.15);
     color: var(--text-primary);
   }
@@ -150,7 +151,7 @@
   /* 12. PROCESS FLOW */
   .process-flow-section {
     background: radial-gradient(circle at 20% 40%, rgba(234, 88, 12, 0.1) 0%, transparent 50%),
-                linear-gradient(180deg, #f8fafc 0%, #fff7ed 50%, #fed7aa 100%) !important;
+      linear-gradient(180deg, #f8fafc 0%, #fff7ed 50%, #fed7aa 100%) !important;
     border-bottom: 1px solid rgba(234, 88, 12, 0.15);
     color: var(--text-primary);
   }
@@ -158,7 +159,7 @@
   /* 13. EQUIPMENT LIST */
   .equipment-list-section {
     background: radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
-                linear-gradient(180deg, #fed7aa 0%, #f1f5f9 50%, #e2e8f0 100%) !important;
+      linear-gradient(180deg, #fed7aa 0%, #f1f5f9 50%, #e2e8f0 100%) !important;
     border-bottom: 1px solid rgba(6, 182, 212, 0.15);
     color: var(--text-primary);
   }
@@ -167,7 +168,7 @@
   .quality-header-intro,
   .cert-grid-component-section {
     background: radial-gradient(circle at 25% 30%, rgba(59, 130, 246, 0.09) 0%, transparent 50%),
-                linear-gradient(180deg, #f8fafc 0%, #eff6ff 50%, #dbeafe 100%) !important;
+      linear-gradient(180deg, #f8fafc 0%, #eff6ff 50%, #dbeafe 100%) !important;
     border-bottom: 1px solid rgba(59, 130, 246, 0.15);
     color: var(--text-primary);
   }
@@ -175,7 +176,7 @@
   /* 15. QUALITY LAB */
   .lab-equipment-component-section {
     background: radial-gradient(circle at 75% 40%, rgba(16, 185, 129, 0.09) 0%, transparent 50%),
-                linear-gradient(180deg, #dbeafe 0%, #f0fdf4 50%, #dcfce7 100%) !important;
+      linear-gradient(180deg, #dbeafe 0%, #f0fdf4 50%, #dcfce7 100%) !important;
     border-bottom: 1px solid rgba(16, 185, 129, 0.15);
     color: var(--text-primary);
   }
@@ -183,7 +184,7 @@
   /* 16. QUALITY PROCESS */
   .quality-process-component-section {
     background: radial-gradient(circle at 30% 60%, rgba(234, 88, 12, 0.09) 0%, transparent 50%),
-                linear-gradient(180deg, #dcfce7 0%, #fff7ed 50%, #fef3c7 100%) !important;
+      linear-gradient(180deg, #dcfce7 0%, #fff7ed 50%, #fef3c7 100%) !important;
     border-bottom: 1px solid rgba(234, 88, 12, 0.15);
     color: var(--text-primary);
   }
@@ -191,14 +192,14 @@
   /* 17. CONTACT */
   .contact-hero-section {
     background: radial-gradient(circle at 50% 20%, rgba(2, 132, 199, 0.11) 0%, transparent 55%),
-                linear-gradient(180deg, #f0f7ff 0%, #e0f2fe 100%) !important;
+      linear-gradient(180deg, #f0f7ff 0%, #e0f2fe 100%) !important;
     border-bottom: 1px solid rgba(2, 132, 199, 0.15);
     color: var(--text-primary);
   }
 
   .contact-main-section {
     background: radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
-                linear-gradient(180deg, #e0f2fe 0%, #f8fafc 50%, #f1f5f9 100%) !important;
+      linear-gradient(180deg, #e0f2fe 0%, #f8fafc 50%, #f1f5f9 100%) !important;
     color: var(--text-primary);
   }
 
@@ -215,12 +216,25 @@
     box-shadow: 0 16px 36px -6px rgba(2, 132, 199, 0.15) !important;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #0f172a;
   }
 
-  p, .overview-body-text, .vm-text, .leader-bio, .cert-desc-copy, .cap-card-main-desc,
-  .step-detail, .stage-node-desc, .ind-card-summary, .product-item-desc {
+  p,
+  .overview-body-text,
+  .vm-text,
+  .leader-bio,
+  .cert-desc-copy,
+  .cap-card-main-desc,
+  .step-detail,
+  .stage-node-desc,
+  .ind-card-summary,
+  .product-item-desc {
     color: #334155;
   }
 
@@ -233,6 +247,7 @@
    2. DARK THEME SECTION PALETTES ([data-theme="dark"])
    ========================================================================== */
 [data-theme="dark"] {
+
   /* Outer feature page backgrounds */
   .about-feature-page,
   .products-feature-page,
@@ -246,8 +261,8 @@
   /* 1. HERO SECTION (Aerospace Navy & Cyan Forge) */
   .home-hero-section {
     background: radial-gradient(circle at 82% 22%, rgba(2, 132, 199, 0.18) 0%, transparent 55%),
-                radial-gradient(circle at 10% 80%, rgba(234, 88, 12, 0.14) 0%, transparent 50%),
-                linear-gradient(145deg, #070c17 0%, #0d1629 60%, #0a1122 100%) !important;
+      radial-gradient(circle at 10% 80%, rgba(234, 88, 12, 0.14) 0%, transparent 50%),
+      linear-gradient(145deg, #070c17 0%, #0d1629 60%, #0a1122 100%) !important;
     border-bottom: 1px solid rgba(2, 132, 199, 0.2);
     color: #f8fafc;
   }
@@ -255,8 +270,8 @@
   /* 2. STATS STRIP */
   .home-stats-strip-section {
     background: radial-gradient(circle at 15% 50%, rgba(2, 132, 199, 0.18) 0%, transparent 55%),
-                radial-gradient(circle at 85% 50%, rgba(234, 88, 12, 0.14) 0%, transparent 55%),
-                linear-gradient(135deg, #0a1324 0%, #0d1b32 50%, #081120 100%) !important;
+      radial-gradient(circle at 85% 50%, rgba(234, 88, 12, 0.14) 0%, transparent 55%),
+      linear-gradient(135deg, #0a1324 0%, #0d1b32 50%, #081120 100%) !important;
     border-top: 1px solid rgba(2, 132, 199, 0.22);
     border-bottom: 1px solid rgba(2, 132, 199, 0.22);
     padding: 3.5rem 0 !important;
@@ -267,15 +282,15 @@
     background: linear-gradient(135deg, rgba(13, 23, 48, 0.96) 0%, rgba(18, 30, 62, 0.96) 100%) !important;
     border: 1.5px solid rgba(59, 130, 246, 0.35) !important;
     box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.45),
-                0 0 35px rgba(59, 130, 246, 0.2) !important;
+      0 0 35px rgba(59, 130, 246, 0.2) !important;
   }
 
   /* 3. ABOUT PREVIEW / COMPANY OVERVIEW (Warm Molten Bronze & Amber Charcoal) */
   .home-about-preview-section,
   .company-overview-section {
     background: radial-gradient(circle at 15% 35%, rgba(234, 88, 12, 0.14) 0%, transparent 55%),
-                radial-gradient(circle at 85% 85%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
-                linear-gradient(180deg, #0a101f 0%, #161114 50%, #140e0c 100%) !important;
+      radial-gradient(circle at 85% 85%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+      linear-gradient(180deg, #0a101f 0%, #161114 50%, #140e0c 100%) !important;
     border-top: 1px solid rgba(234, 88, 12, 0.2);
     border-bottom: 1px solid rgba(234, 88, 12, 0.2);
     color: #f8fafc;
@@ -285,8 +300,8 @@
   .home-cap-overview-section,
   .capabilities-top-section {
     background: radial-gradient(circle at 85% 30%, rgba(2, 132, 199, 0.14) 0%, transparent 55%),
-                radial-gradient(circle at 15% 75%, rgba(148, 163, 184, 0.08) 0%, transparent 50%),
-                linear-gradient(180deg, #140e0c 0%, #0c1524 50%, #0a121f 100%) !important;
+      radial-gradient(circle at 15% 75%, rgba(148, 163, 184, 0.08) 0%, transparent 50%),
+      linear-gradient(180deg, #140e0c 0%, #0c1524 50%, #0a121f 100%) !important;
     border-bottom: 1px solid rgba(2, 132, 199, 0.2);
     color: #f8fafc;
   }
@@ -295,8 +310,8 @@
   .home-prod-showcase-section,
   .products-header-section {
     background: radial-gradient(circle at 20% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(2, 132, 199, 0.11) 0%, transparent 50%),
-                linear-gradient(180deg, #0a121f 0%, #091722 50%, #08141d 100%) !important;
+      radial-gradient(circle at 80% 80%, rgba(2, 132, 199, 0.11) 0%, transparent 50%),
+      linear-gradient(180deg, #0a121f 0%, #091722 50%, #08141d 100%) !important;
     border-bottom: 1px solid rgba(6, 182, 212, 0.2);
     color: #f8fafc;
   }
@@ -305,8 +320,8 @@
   .home-industries-section,
   .industries-main-section {
     background: radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.18) 0%, transparent 55%),
-                radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
-                linear-gradient(180deg, #08141d 0%, #131028 50%, #100d23 100%) !important;
+      radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.12) 0%, transparent 50%),
+      linear-gradient(180deg, #08141d 0%, #131028 50%, #100d23 100%) !important;
     border-top: 1.5px solid rgba(99, 102, 241, 0.25);
     border-bottom: 1.5px solid rgba(99, 102, 241, 0.25);
     padding: 5.5rem 0 !important;
@@ -328,8 +343,8 @@
   .cert-bar-section,
   .certifications-list-section {
     background: radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.2) 0%, transparent 55%),
-                radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 55%),
-                linear-gradient(135deg, #091715 0%, #0d221e 50%, #081412 100%) !important;
+      radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 55%),
+      linear-gradient(135deg, #091715 0%, #0d221e 50%, #081412 100%) !important;
     border-top: 1.5px solid rgba(16, 185, 129, 0.25);
     border-bottom: 1.5px solid rgba(16, 185, 129, 0.25);
     padding: 3rem 0 !important;
@@ -345,7 +360,7 @@
   /* 8. CALL TO ACTION (Deep Molten Forge Ember Glow) */
   .home-cta-full-section {
     background: radial-gradient(circle at 50% 30%, rgba(234, 88, 12, 0.24) 0%, transparent 65%),
-                linear-gradient(135deg, #180d08 0%, #291209 50%, #140907 100%) !important;
+      linear-gradient(135deg, #180d08 0%, #291209 50%, #140907 100%) !important;
     border-top: 1px solid rgba(234, 88, 12, 0.25);
     color: #f8fafc;
   }
@@ -353,8 +368,8 @@
   /* 9. VISION & MISSION */
   .vision-mission-section {
     background: radial-gradient(circle at 20% 40%, rgba(99, 102, 241, 0.14) 0%, transparent 55%),
-                radial-gradient(circle at 80% 60%, rgba(234, 88, 12, 0.09) 0%, transparent 50%),
-                linear-gradient(180deg, #0c1527 0%, #13112b 50%, #100e24 100%) !important;
+      radial-gradient(circle at 80% 60%, rgba(234, 88, 12, 0.09) 0%, transparent 50%),
+      linear-gradient(180deg, #0c1527 0%, #13112b 50%, #100e24 100%) !important;
     border-bottom: 1px solid rgba(99, 102, 241, 0.2);
     color: #f8fafc;
   }
@@ -362,7 +377,7 @@
   /* 10. TIMELINE */
   .timeline-component-section {
     background: radial-gradient(circle at 75% 40%, rgba(234, 88, 12, 0.13) 0%, transparent 55%),
-                linear-gradient(180deg, #100e24 0%, #141012 50%, #0f0d11 100%) !important;
+      linear-gradient(180deg, #100e24 0%, #141012 50%, #0f0d11 100%) !important;
     border-bottom: 1px solid rgba(234, 88, 12, 0.2);
     color: #f8fafc;
   }
@@ -370,7 +385,7 @@
   /* 11. LEADERSHIP */
   .leadership-component-section {
     background: radial-gradient(circle at 25% 50%, rgba(6, 182, 212, 0.13) 0%, transparent 50%),
-                linear-gradient(180deg, #0f0d11 0%, #0a1722 50%, #08131d 100%) !important;
+      linear-gradient(180deg, #0f0d11 0%, #0a1722 50%, #08131d 100%) !important;
     border-bottom: 1px solid rgba(6, 182, 212, 0.2);
     color: #f8fafc;
   }
@@ -378,7 +393,7 @@
   /* 12. PROCESS FLOW */
   .process-flow-section {
     background: radial-gradient(circle at 20% 40%, rgba(234, 88, 12, 0.14) 0%, transparent 50%),
-                linear-gradient(180deg, #0b1526 0%, #16110d 50%, #130d09 100%) !important;
+      linear-gradient(180deg, #0b1526 0%, #16110d 50%, #130d09 100%) !important;
     border-bottom: 1px solid rgba(234, 88, 12, 0.2);
     color: #f8fafc;
   }
@@ -386,7 +401,7 @@
   /* 13. EQUIPMENT LIST */
   .equipment-list-section {
     background: radial-gradient(circle at 70% 60%, rgba(6, 182, 212, 0.14) 0%, transparent 50%),
-                linear-gradient(180deg, #130d09 0%, #091722 50%, #07131c 100%) !important;
+      linear-gradient(180deg, #130d09 0%, #091722 50%, #07131c 100%) !important;
     border-bottom: 1px solid rgba(6, 182, 212, 0.2);
     color: #f8fafc;
   }
@@ -395,7 +410,7 @@
   .quality-header-intro,
   .cert-grid-component-section {
     background: radial-gradient(circle at 25% 30%, rgba(59, 130, 246, 0.14) 0%, transparent 50%),
-                linear-gradient(180deg, #070d18 0%, #0c162d 50%, #081122 100%) !important;
+      linear-gradient(180deg, #070d18 0%, #0c162d 50%, #081122 100%) !important;
     border-bottom: 1px solid rgba(59, 130, 246, 0.2);
     color: #f8fafc;
   }
@@ -403,7 +418,7 @@
   /* 15. QUALITY LAB */
   .lab-equipment-component-section {
     background: radial-gradient(circle at 75% 40%, rgba(16, 185, 129, 0.14) 0%, transparent 50%),
-                linear-gradient(180deg, #081122 0%, #081716 50%, #061312 100%) !important;
+      linear-gradient(180deg, #081122 0%, #081716 50%, #061312 100%) !important;
     border-bottom: 1px solid rgba(16, 185, 129, 0.2);
     color: #f8fafc;
   }
@@ -411,7 +426,7 @@
   /* 16. QUALITY PROCESS */
   .quality-process-component-section {
     background: radial-gradient(circle at 30% 60%, rgba(234, 88, 12, 0.13) 0%, transparent 50%),
-                linear-gradient(180deg, #061312 0%, #16110e 50%, #130d09 100%) !important;
+      linear-gradient(180deg, #061312 0%, #16110e 50%, #130d09 100%) !important;
     border-bottom: 1px solid rgba(234, 88, 12, 0.2);
     color: #f8fafc;
   }
@@ -419,15 +434,15 @@
   /* 17. CONTACT */
   .contact-hero-section {
     background: radial-gradient(circle at 50% 20%, rgba(2, 132, 199, 0.16) 0%, transparent 55%),
-                linear-gradient(180deg, #060a14 0%, #0a1222 100%) !important;
+      linear-gradient(180deg, #060a14 0%, #0a1222 100%) !important;
     border-bottom: 1px solid rgba(2, 132, 199, 0.18);
     color: #f8fafc;
   }
 
   .contact-main-section {
     background: radial-gradient(circle at 20% 30%, rgba(234, 88, 12, 0.11) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.11) 0%, transparent 50%),
-                linear-gradient(180deg, #0a1222 0%, #0e1526 50%, #070b14 100%) !important;
+      radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.11) 0%, transparent 50%),
+      linear-gradient(180deg, #0a1222 0%, #0e1526 50%, #070b14 100%) !important;
     color: #f8fafc;
   }
 
@@ -442,15 +457,28 @@
     background: rgba(18, 28, 52, 0.88) !important;
     border-color: rgba(56, 189, 248, 0.5) !important;
     box-shadow: 0 18px 40px -8px rgba(0, 0, 0, 0.55),
-                0 0 25px rgba(56, 189, 248, 0.15) !important;
+      0 0 25px rgba(56, 189, 248, 0.15) !important;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #f8fafc;
   }
 
-  p, .overview-body-text, .vm-text, .leader-bio, .cert-desc-copy, .cap-card-main-desc,
-  .step-detail, .stage-node-desc, .ind-card-summary, .product-item-desc {
+  p,
+  .overview-body-text,
+  .vm-text,
+  .leader-bio,
+  .cert-desc-copy,
+  .cap-card-main-desc,
+  .step-detail,
+  .stage-node-desc,
+  .ind-card-summary,
+  .product-item-desc {
     color: #cbd5e1;
   }
 

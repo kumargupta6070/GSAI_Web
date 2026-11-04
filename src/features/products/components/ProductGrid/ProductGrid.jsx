@@ -20,9 +20,13 @@ export const ProductGrid = ({ products = [], onOpenDetail, onResetFilters }) => 
   return (
     <div className="product-grid-catalog">
       {products.map((product, idx) => (
-        <ScrollReveal key={product.id} animation="fade-up" delay={idx * 75}>
+        <div
+          key={product.id}
+          className="product-card-tab-anim"
+          style={{ animationDelay: `${Math.min(idx * 65, 450)}ms` }}
+        >
           <ProductCard product={product} onOpenDetail={onOpenDetail} />
-        </ScrollReveal>
+        </div>
       ))}
     </div>
   );

@@ -1,14 +1,101 @@
 .page-transition-wrapper {
-  animation: pageFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+}
+
+/* 1. Precision Laser Beam Sweeping Across Screen on Tab Switch */
+.page-transition-beam {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #0284c7 0%, #38bdf8 35%, #ea580c 70%, #fbbf24 100%);
+  box-shadow: 0 0 16px rgba(2, 132, 199, 0.9), 0 0 25px rgba(234, 88, 12, 0.7);
+  z-index: 99999;
+  animation: beamSweep 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes beamSweep {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* 2. Fluid Cinematic Page Content Entrance */
+.page-transition-content {
+  animation: pageFadeSlideIn 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
   width: 100%;
 }
 
-@keyframes pageFadeIn {
-  from {
+@keyframes pageFadeSlideIn {
+  0% {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(22px) scale(0.992);
+    filter: blur(4px);
   }
-  to {
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+/* 3. Automatic Cascaded Stagger on Fresh Page Load / Tab Switch */
+.page-transition-content .section-title-wrap,
+.page-transition-content .page-category-badge,
+.page-transition-content .section-tag-pill {
+  animation: elementSlideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+.page-transition-content h1,
+.page-transition-content .hero-title,
+.page-transition-content .contact-main-heading {
+  animation: elementSlideDown 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.page-transition-content p.hero-subtitle,
+.page-transition-content p.section-subtitle-text,
+.page-transition-content p.contact-subheading {
+  animation: elementFadeSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+/* Stagger cards and interactive containers */
+.page-transition-content .stats-strip-card,
+.page-transition-content .product-filter-control-card,
+.page-transition-content .capabilities-top-section,
+.page-transition-content .company-overview-section {
+  animation: elementFadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+@keyframes elementSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes elementFadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }

@@ -44,11 +44,16 @@
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
   transition: all var(--transition-fast);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  cursor: pointer;
 }
 
 .prod-filter-btn:hover {
   background: var(--bg-tertiary);
   color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
 }
 
 .prod-filter-btn.active {
@@ -56,6 +61,23 @@
   color: #ffffff;
   border-color: transparent;
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.4);
+  transform: scale(1.05);
+  animation: tabPillPulse 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes tabPillPulse {
+  0% {
+    transform: scale(0.94);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
 }
 
 @media (max-width: 640px) {

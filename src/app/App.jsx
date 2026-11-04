@@ -38,6 +38,20 @@ export const AppContent = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
+  // Browser tab switch listener: revitalizes page when user returns to this tab
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        document.body.classList.add('tab-revitalize');
+        setTimeout(() => {
+          document.body.classList.remove('tab-revitalize');
+        }, 850);
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
+  }, []);
+
   return (
     <div className="app-layout">
       <RouteChangeScroller />

@@ -9,15 +9,28 @@ export const CounterAnimation = ({
   duration = 2000,
   className = ''
 }) => {
-  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0, rootMargin: '0px 0px 100px 0px' });
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const isDecimal = Number(target) % 1 !== 0;
 
+  // Fallback: If observer didn't trigger yet (e.g. initial view above fold or fast load), auto-start after 300ms
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasStarted(prev => prev || true);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     if (isVisible && !hasStarted) {
       setHasStarted(true);
+    }
+  }, [isVisible, hasStarted]);
 
+  useEffect(() => {
+    if (hasStarted) {
       let startTime = null;
       let frameId;
 
@@ -40,10 +53,10 @@ export const CounterAnimation = ({
       frameId = requestAnimationFrame(step);
       return () => cancelAnimationFrame(frameId);
     }
-  }, [isVisible, hasStarted, target, duration, isDecimal]);
+  }, [hasStarted, target, duration, isDecimal]);
 
-  const displayValue = isDecimal 
-    ? count.toFixed(2) 
+  const displayValue = isDecimal
+    ? count.toFixed(2)
     : count.toLocaleString();
 
   return (

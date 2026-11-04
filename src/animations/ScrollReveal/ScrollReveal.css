@@ -1,8 +1,9 @@
 .scroll-reveal-container {
   opacity: 0;
-  will-change: transform, opacity;
-  transition-property: transform, opacity;
+  will-change: transform, opacity, filter;
+  transition-property: transform, opacity, filter;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  filter: blur(4px);
 }
 
 .scroll-reveal-container.fade-up {
@@ -32,4 +33,5 @@
 .scroll-reveal-container.is-revealed {
   opacity: 1;
   transform: translate(0) scale(1);
+  filter: blur(0px);
 }

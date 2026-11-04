@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="dark light" />
     <title>GSA Industries India Pvt Ltd — World-Class Precision Engineering & Forging</title>
     <meta name="description" content="GSA Industries India Pvt Ltd (GSAI) is an IATF 16949 & ISO 9001 certified global leader in high-precision machined forging, Alfin rings, automotive pistons, and industrial components." />
     <meta name="keywords" content="GSA Industries, Alfin Rings, Precision Machining, Hot Forging, Automotive Components, CNC Machining, Heat Treatment, Punjab Industrial Engineering" />
     
-    <!-- Inline FOUC Prevention for Theme -->
+    <!-- Inline FOUC Prevention for Theme (Default: Dark) -->
     <script>
       (function() {
         try {
-          const stored = localStorage.getItem('gsa_theme');
-          const theme = stored ? stored : 'light';
+          const version = localStorage.getItem('gsa_theme_v');
+          let theme = 'dark';
+          if (version === '2') {
+            const stored = localStorage.getItem('gsa_theme');
+            if (stored === 'dark' || stored === 'light') theme = stored;
+          } else {
+            localStorage.setItem('gsa_theme', 'dark');
+            localStorage.setItem('gsa_theme_v', '2');
+          }
           document.documentElement.setAttribute('data-theme', theme);
           const metaScheme = document.querySelector('meta[name="color-scheme"]');
           if (metaScheme) metaScheme.content = theme;
         } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.setAttribute('data-theme', 'dark');
         }
       })();
     </script>

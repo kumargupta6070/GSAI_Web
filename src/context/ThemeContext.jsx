@@ -5,13 +5,18 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     try {
-      const stored = localStorage.getItem('gsa_theme');
-      if (stored === 'dark' || stored === 'light') {
-        return stored;
+      const version = localStorage.getItem('gsa_theme_v');
+      if (version === '2') {
+        const stored = localStorage.getItem('gsa_theme');
+        if (stored === 'dark' || stored === 'light') {
+          return stored;
+        }
       }
-      return 'light'; // Default is light as requested by user
+      localStorage.setItem('gsa_theme', 'dark');
+      localStorage.setItem('gsa_theme_v', '2');
+      return 'dark'; // Default is dark
     } catch {
-      return 'light';
+      return 'dark';
     }
   });
 
@@ -19,6 +24,7 @@ export const ThemeProvider = ({ children }) => {
     try {
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('gsa_theme', theme);
+      localStorage.setItem('gsa_theme_v', '2');
       
       const meta = document.querySelector('meta[name="color-scheme"]');
       if (meta) {
@@ -30,7 +36,16 @@ export const ThemeProvider = ({ children }) => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
+    setTheme(prev => {
+      const next = prev === 'light' ? 'dark' : 'light';
+      try {
+        localStorage.setItem('gsa_theme', next);
+        localStorage.setItem('gsa_theme_v', '2');
+      } catch (e) {
+        console.warn('Failed to save theme toggle:', e);
+      }
+      return next;
+    });
   };
 
   return (

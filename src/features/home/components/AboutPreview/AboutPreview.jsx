@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Factory, CheckCircle2, ArrowRight, ShieldCheck, Cpu } from 'lucide-react';
+import { Factory, CheckCircle2, ArrowRight, Cpu } from 'lucide-react';
 import Button from '../../../../common/Button/Button';
 import SectionTitle from '../../../../common/SectionTitle/SectionTitle';
 import ScrollReveal from '../../../../animations/ScrollReveal/ScrollReveal';
@@ -15,12 +15,7 @@ export const AboutPreview = () => {
           <div className="preview-media-col">
             <ScrollReveal animation="scale-up" duration={700}>
               <TiltCard maxTilt={6}>
-                <div className="preview-img-card glass-card">
-                  <img
-                    src="/images/capabilities/cnc-machining.jpg"
-                    alt="GSA CNC Machining Plant"
-                    className="preview-img"
-                  />
+                <div className="preview-img-card">
                   <div className="preview-img-inner">
                     <img
                       src="/images/capabilities/cnc-machining.jpg"
@@ -28,14 +23,14 @@ export const AboutPreview = () => {
                       className="preview-img"
                     />
                   </div>
-                  <div className="preview-stat-overlay glass-card">
+                  <div className="preview-stat-overlay">
                     <Factory size={22} className="text-cyan" />
                     <div>
                       <strong>150,000+ Sq. Ft.</strong>
                       <span>Fully Integrated Punjab Campus</span>
                     </div>
                   </div>
-                  <div className="preview-floating-tech-badge glass-card">
+                  <div className="preview-floating-tech-badge">
                     <Cpu size={18} className="text-orange" />
                     <span>4-Axis VMC &amp; German CMM</span>
                   </div>

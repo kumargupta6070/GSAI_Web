@@ -1,5 +1,6 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
+import PageTransition from '../animations/PageTransition/PageTransition';
 
 // Feature Pages
 import Home from '../features/home/Home';
@@ -32,17 +33,21 @@ export const NotFoundPage = () => {
 };
 
 export const AppRoutes = () => {
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/products" element={<Products />} />
-      <Route path="/capabilities" element={<Capabilities />} />
-      <Route path="/industries" element={<Industries />} />
-      <Route path="/quality" element={<Quality />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+    <PageTransition key={location.pathname}>
+      <Routes location={location}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/capabilities" element={<Capabilities />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/quality" element={<Quality />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </PageTransition>
   );
 };
 

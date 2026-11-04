@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 
 export const useIntersectionObserver = ({
-  threshold = 0.15,
-  rootMargin = '0px 0px -40px 0px',
+  threshold = 0.05,
+  rootMargin = '0px 0px 50px 0px',
   triggerOnce = true
 } = {}) => {
   const [isIntersecting, setIsIntersecting] = useState(false);

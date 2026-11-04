@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import ProductGrid from './components/ProductGrid/ProductGrid';
 import ProductFilter from './components/ProductFilter/ProductFilter';
 import ProductDetail from './components/ProductDetail/ProductDetail';
+import Breadcrumb from '../../common/Breadcrumb/Breadcrumb';
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import ScrollReveal from '../../animations/ScrollReveal/ScrollReveal';
 import { ALL_PRODUCTS } from './data/productsData';
@@ -26,7 +27,7 @@ export const Products = () => {
   const filteredProducts = useMemo(() => {
     return ALL_PRODUCTS.filter(prod => {
       const matchCat = activeCategory === 'all' || prod.categorySlug === activeCategory;
-      const matchSearch = searchQuery.trim() === '' || 
+      const matchSearch = searchQuery.trim() === '' ||
         prod.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         prod.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         prod.materials.some(m => m.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -36,6 +37,10 @@ export const Products = () => {
 
   return (
     <div className="products-feature-page">
+      <div className="container products-breadcrumb-wrap">
+        <Breadcrumb items={[{ label: 'Products' }]} />
+      </div>
+
       <section className="section-spacing products-header-section">
         <div className="container">
           <ScrollReveal animation="fade-up" delay={50}>
@@ -59,6 +64,7 @@ export const Products = () => {
           </ScrollReveal>
 
           <ProductGrid
+            key={`${activeCategory}-${searchQuery}`}
             products={filteredProducts}
             onOpenDetail={(product) => setSelectedProduct(product)}
             onResetFilters={() => {
